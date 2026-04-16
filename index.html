@@ -1,1 +1,1253 @@
-hello world
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>박경근 | Kay / KyungKeun Park</title>
+  <meta name="description" content="행복을 기획하는 박경근의 포트폴리오">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="sidebar-inner">
+        <div class="identity">
+          <div class="profile-photo">
+            <img src="assets/profile.jpeg" alt="박경근">
+          </div>
+          <h1 class="title">
+            박경근
+            <span class="en">Kay / KyungKeun Park</span>
+          </h1>
+        </div>
+
+        <div class="tagline">코드를 읽고, 데이터를 묻는 PM</div>
+
+        <div class="contact-list">
+          <a href="mailto:kkpark9352@gmail.com" class="contact-item">
+            <img src="https://api.iconify.design/logos:google-gmail.svg" alt="" class="contact-icon">
+            <span>kkpark9352@gmail.com</span>
+          </a>
+          <a href="https://www.linkedin.com/in/kaykyungkeunpark/" target="_blank" rel="noopener" class="contact-item">
+            <img src="https://api.iconify.design/logos:linkedin-icon.svg" alt="" class="contact-icon">
+            <span>linkedin.com/in/kaykyungkeunpark</span>
+          </a>
+        </div>
+
+        <section class="profile-card">
+          <div class="profile-card-label"><span class="profile-card-icon">📆</span>Birth</div>
+          <div class="profile-card-body">
+            <details class="reveal">
+              <summary>확인하기</summary>
+              <span class="reveal-value">1993.05.02</span>
+            </details>
+          </div>
+        </section>
+
+        <section class="profile-card">
+          <div class="profile-card-label"><span class="profile-card-icon">🎓</span>Education</div>
+          <div class="profile-card-body">
+            <div class="profile-line-main">서울대학교 수리과학부 졸업</div>
+            <div class="profile-line-sub">2012.03 — 2018.02</div>
+          </div>
+        </section>
+
+        <section class="profile-card">
+          <div class="profile-card-label"><span class="profile-card-icon">💼</span>Work Experiences</div>
+          <ul class="timeline">
+            <li class="timeline-item is-current">
+              <div class="timeline-company">(주)크랩스 <span class="badge-soft">재직중</span></div>
+              <div class="timeline-period">2025.04 ~ 현재</div>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-company">(주)유쾌한프로젝트</div>
+              <div class="timeline-role">Makers · 앱/웹 기획</div>
+              <div class="timeline-period">2024.12 — 2025.03</div>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-company">(주)개념원리</div>
+              <div class="timeline-role">온라인사업부 기획팀 · 앱 서비스 및 콘텐츠 기획</div>
+              <div class="timeline-period">2023.06 — 2024.11</div>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-company">(주)렛유인에듀</div>
+              <div class="timeline-role">이공계 교육 콘텐츠 기획</div>
+              <div class="timeline-period">2021.01 — 2023.06</div>
+            </li>
+          </ul>
+        </section>
+
+        <section class="profile-card">
+          <div class="profile-card-label"><span class="profile-card-icon">🏆</span>Key Impact</div>
+          <div class="profile-card-body">
+            <div class="impact-item">
+              <div class="impact-name">클라이피 앱 <span class="impact-period">유쾌한프로젝트 · 2024.12–2025.03</span></div>
+              <div class="impact-metric">기획 <strong>11주</strong> 만에 App Store / Play Store 동시 런칭 (LLM 챗봇 기획 포함)</div>
+            </div>
+            <div class="impact-item">
+              <div class="impact-name">EGRIT 내신 학습관 <span class="impact-period">개념원리 · 2024.09–11</span></div>
+              <div class="impact-metric">주말 DAU <strong>+68%</strong> · 앱 런칭 후 <strong>최대 MAU</strong> 달성</div>
+            </div>
+            <div class="impact-item">
+              <div class="impact-name">LBTI TEST <span class="impact-period">렛유인에듀 · 2021.07–08</span></div>
+              <div class="impact-metric">이공계 직무 추천 알고리즘 설계, 누적 <strong>24,000명+</strong> 응시</div>
+            </div>
+          </div>
+        </section>
+
+        <div class="profile-card-label" id="skills" style="margin-top: 24px;"><span class="profile-card-icon">🛠️</span>Skills</div>
+
+        <div class="abilities-group">
+          <div class="abilities-group-title">AI Tools</div>
+          <div class="ability-row">
+            <div class="ability-name"><img src="https://cdn.simpleicons.org/claude" class="ability-logo" alt="">Claude Code</div>
+            <div class="ability-bar"><div class="ability-bar-fill" style="width: 80%;"></div></div><span class="ability-bar-pct">80%</span>
+            <div class="ability-desc">Claude Code의 skill 기능을 활용해 비개발자임에도 multi-repo(API/AI/웹앱) 환경에서 코드 분석과 R&D 사이클을 주도하고, plan/review 워크플로우로 개발자 협업 효율을 높일 수 있는 수준</div>
+          </div>
+          <div class="ability-row">
+            <div class="ability-name"><img src="https://cdn.simpleicons.org/cursor" class="ability-logo" alt="">Cursor</div>
+            <div class="ability-bar"><div class="ability-bar-fill" style="width: 60%;"></div></div><span class="ability-bar-pct">60%</span>
+            <div class="ability-desc">IDE 환경에서 인라인 편집과 빠른 코드 탐색을 활용해 기획 문서와 실제 코드의 연결을 즉시 확인하고, 작은 단위 변경을 가볍게 반영할 수 있는 수준</div>
+          </div>
+        </div>
+
+        <div class="abilities-group">
+          <div class="abilities-group-title">Data Analysis</div>
+          <div class="ability-row">
+            <div class="ability-name"><img src="https://cdn.simpleicons.org/mysql" class="ability-logo" alt="">MySQL</div>
+            <div class="ability-bar"><div class="ability-bar-fill" style="width: 70%;"></div></div><span class="ability-bar-pct">70%</span>
+            <div class="ability-desc">DB 구조를 파악하고 AI 협업을 활용해 join·서브쿼리·집계 등 복잡한 쿼리도 직접 작성하여, 원하는 고객 데이터를 자유롭게 추출하고 가설을 검증할 수 있는 수준 (스키마 설계는 개발자와 협업)</div>
+          </div>
+          <div class="ability-row">
+            <div class="ability-name"><img src="https://api.iconify.design/logos:amplitude-icon.svg" class="ability-logo" alt="">Amplitude</div>
+            <div class="ability-bar"><div class="ability-bar-fill" style="width: 70%;"></div></div><span class="ability-bar-pct">70%</span>
+            <div class="ability-desc">주어진 이벤트 리스트를 활용하여 원하는 데이터를 확인하고, 인사이트를 얻을 수 있는 수준</div>
+          </div>
+        </div>
+
+        <div class="abilities-group">
+          <div class="abilities-group-title">Productivity Tools</div>
+          <div class="ability-row">
+            <div class="ability-name"><img src="https://api.iconify.design/logos:slack-icon.svg" class="ability-logo" alt="">Slack</div>
+            <div class="ability-bar"><div class="ability-bar-fill" style="width: 90%;"></div></div><span class="ability-bar-pct">90%</span>
+            <div class="ability-desc">채널 운영은 물론 n8n을 활용해 자동화 봇을 직접 제작하고, Slack 워크플로와 리스트 기능으로 개발 일정 관리 칸반을 구축해 실제 팀에서 운영한 경험이 있는 수준</div>
+          </div>
+          <div class="ability-row">
+            <div class="ability-name"><img src="https://cdn.simpleicons.org/notion" class="ability-logo" alt="">Notion</div>
+            <div class="ability-bar"><div class="ability-bar-fill" style="width: 80%;"></div></div><span class="ability-bar-pct">80%</span>
+            <div class="ability-desc">DB와 속성을 활용하여 업무 히스토리를 정리하고, 프로젝트 진행 시 활용할 수 있는 수준</div>
+          </div>
+          <div class="ability-row">
+            <div class="ability-name"><img src="https://cdn.simpleicons.org/figma" class="ability-logo" alt="">Figma</div>
+            <div class="ability-bar"><div class="ability-bar-fill" style="width: 70%;"></div></div><span class="ability-bar-pct">70%</span>
+            <div class="ability-desc">모바일/웹 사이즈에 맞는 프레임에 오토 레이아웃을 활용하여 각종 에셋을 개발이 가능한 형태로 배치할 수 있는 수준</div>
+          </div>
+          <div class="ability-row">
+            <div class="ability-name"><img src="https://cdn.simpleicons.org/airtable" class="ability-logo" alt="">Airtable</div>
+            <div class="ability-bar"><div class="ability-bar-fill" style="width: 60%;"></div></div><span class="ability-bar-pct">60%</span>
+            <div class="ability-desc">목적에 맞춰 Base와 Table을 생성하고 Link와 Lookup을 적절히 활용하여 협업 대상자에게 적합한 형태의 View를 구성할 수 있는 수준</div>
+          </div>
+          <div class="ability-row">
+            <div class="ability-name"><img src="https://cdn.simpleicons.org/confluence" class="ability-logo" alt="">Confluence</div>
+            <div class="ability-bar"><div class="ability-bar-fill" style="width: 50%;"></div></div><span class="ability-bar-pct">50%</span>
+            <div class="ability-desc">JIRA와 연동하여 간단한 JQL을 활용한 프로젝트 업무 관리 페이지를 제작할 수 있는 수준</div>
+          </div>
+          <div class="ability-row">
+            <div class="ability-name"><img src="https://cdn.simpleicons.org/jira" class="ability-logo" alt="">Jira</div>
+            <div class="ability-bar"><div class="ability-bar-fill" style="width: 50%;"></div></div><span class="ability-bar-pct">50%</span>
+            <div class="ability-desc">원하는 티켓 리스트를 생성할 수 있고, 티켓을 발행하여 업무를 관리하는 수준</div>
+          </div>
+        </div>
+
+      </div>
+    </aside>
+
+    <main class="main">
+      <nav class="anchor-nav">
+        <div class="anchor-nav-inner">
+          <div class="anchor-nav-links">
+            <a href="#about">About</a>
+            <a href="#approach">Approach</a>
+            <a href="#works">Cases</a>
+            <a href="#all-projects">All Projects</a>
+          </div>
+          <div class="anchor-nav-actions">
+            <button class="icon-button" id="theme-toggle" type="button" aria-label="다크모드 토글" title="테마 전환">
+              <span class="theme-icon-light" aria-hidden="true">🌙</span>
+              <span class="theme-icon-dark" aria-hidden="true">☀️</span>
+            </button>
+            <button class="pdf-button" onclick="window.print()" type="button">
+              <span aria-hidden="true">⌘</span> Print / PDF
+            </button>
+          </div>
+        </div>
+      </nav>
+      <div class="container">
+
+    <section id="about" class="hero">
+      <div class="hero-eyebrow">PM · 기획자</div>
+      <h1 class="hero-headline">
+        비개발자가 multi-repo를 직접 읽는 시대.<br>
+        <span class="hero-headline-accent">기획자도 코드와 데이터로 결정합니다.</span>
+      </h1>
+      <p class="hero-bio">
+        데이터에서 문제를 발견합니다.<br>
+        개발자와 함께 해결책을 설계합니다.<br>
+        AI 도구로 검증 속도를 끌어올립니다.
+      </p>
+      <p class="hero-bio-coda">
+        아래 숫자는 그렇게 만들어낸 결과입니다.
+      </p>
+    </section>
+
+    <section class="impact-numbers">
+      <div class="impact-num-card">
+        <div class="impact-num">+68<span class="impact-num-unit">%</span></div>
+        <div class="impact-num-label">주말 DAU 상승</div>
+        <div class="impact-num-context">EGRIT 내신 학습관 · 2024</div>
+      </div>
+      <div class="impact-num-card">
+        <div class="impact-num">11<span class="impact-num-unit">주</span></div>
+        <div class="impact-num-label">기획 → 양 스토어 런칭</div>
+        <div class="impact-num-context">클라이피 앱 · 2025</div>
+      </div>
+      <div class="impact-num-card">
+        <div class="impact-num">24K<span class="impact-num-unit">+</span></div>
+        <div class="impact-num-label">누적 응시자</div>
+        <div class="impact-num-context">LBTI TEST · 2021–24</div>
+      </div>
+    </section>
+
+    <h2 id="approach" class="section-title">How I Work</h2>
+    <p class="section-lede">기획서를 던지지 않습니다. 데이터와 코드 안에서 함께 결정합니다.</p>
+
+    <div class="principles">
+      <article class="principle">
+        <div class="principle-num">01</div>
+        <div class="principle-body">
+          <h3 class="principle-title">데이터로 본다 — 감으로 결정하지 않는다</h3>
+          <p class="principle-desc">
+            "정답 입력하다 틀린다", "y/z가 안 보인다" 같은 VOC가 반복되는 것을 발견.
+            "풀이 흐름의 병목이 정답 입력 단계"라는 가설로 좁혀, AI팀의 CV 모델과 협업해 필기 인식 기능으로 검증.
+            결과는 90개 분석 문항 중 <strong>80%에서 풀이 시간 단축, 평균 17%</strong>.
+          </p>
+          <div class="principle-tag">필기로 정답 입력 기능 · 개념원리</div>
+        </div>
+      </article>
+
+      <article class="principle">
+        <div class="principle-num">02</div>
+        <div class="principle-body">
+          <h3 class="principle-title">개발자 옆에 앉는다 — 기획서 던지지 않는다</h3>
+          <p class="principle-desc">
+            백엔드 리소스가 주 2일밖에 안 되는 상황에서, 기존 API를 큐레이션하는 방식을 함께 설계.
+            앱 개발자와는 전체 Flow를, 백엔드와는 활용 가능한 엔드포인트를 같이 정리.
+            내신 대비 동선을 한 달 안에 출시해 <strong>주말 DAU +68%, 앱 런칭 후 최대 MAU</strong>.
+          </p>
+          <div class="principle-tag">EGRIT 내신 학습관 · 개념원리</div>
+        </div>
+      </article>
+
+      <article class="principle">
+        <div class="principle-num">03</div>
+        <div class="principle-body">
+          <h3 class="principle-title">AI로 본다 — 모른다고 멈추지 않는다</h3>
+          <p class="principle-desc">
+            Claude Code의 skill 기능을 활용해 multi-repo(API/AI/웹앱)를 직접 읽고,
+            MySQL 쿼리도 AI 협업으로 작성.
+            <strong>비개발자가 코드 R&D 사이클을 주도</strong>하며 개발자 의존도를 줄이고 가설 검증 속도를 끌어올림.
+          </p>
+          <div class="principle-tag">2025 ~ 현재 · 크랩스</div>
+        </div>
+      </article>
+    </div>
+
+    <h2 id="works" class="section-title">Selected Cases</h2>
+    <p class="section-lede">대표 프로젝트 4개. 각 카드에서 Problem → Approach → Impact를 확인할 수 있습니다.</p>
+
+    <div class="featured-works">
+
+      <a href="works/clify.html" class="featured-work" data-case="clify">
+        <div class="featured-thumb">
+          <img src="assets/works/clify/flow-home.png" alt="클라이피 앱">
+        </div>
+        <div class="featured-meta">
+          <div class="featured-tags">
+            <span class="company-dot tag-ukpj"></span>
+            <span>유쾌한프로젝트</span>
+            <span class="dot-sep">·</span>
+            <span>2024.12 → 2025.03</span>
+          </div>
+          <div class="featured-title">클라이피 앱 기획</div>
+          <div class="featured-impact">기획 <strong>11주</strong> 만에 App Store / Play Store 동시 런칭</div>
+          <div class="featured-desc">기존 웹사이트를 대체할 신규 앱. LLM 챗봇 기반 상담사 추천, 미션·마음배터리 시스템, 샌드버드 SDK 도입까지 기획.</div>
+        </div>
+      </a>
+
+      <a href="works/naesin.html" class="featured-work" data-case="naesin">
+        <div class="featured-thumb">
+          <img src="assets/works/naesin/main-screen.png" alt="내신 학습관">
+        </div>
+        <div class="featured-meta">
+          <div class="featured-tags">
+            <span class="company-dot tag-gnwl"></span>
+            <span>개념원리</span>
+            <span class="dot-sep">·</span>
+            <span>2024.10 → 2024.11</span>
+          </div>
+          <div class="featured-title">EGRIT 내신 학습관</div>
+          <div class="featured-impact">주말 DAU <strong>+68%</strong> · 앱 런칭 후 <strong>최대 MAU</strong> 달성</div>
+          <div class="featured-desc">백엔드 리소스 부족 상황에서 기존 API를 큐레이션하여 내신 대비 학습 흐름을 설계. 신규 유저 리텐션 53.3% 달성.</div>
+        </div>
+      </a>
+
+      <a href="works/handwriting.html" class="featured-work" data-case="handwriting">
+        <div class="featured-thumb">
+          <img src="assets/works/handwriting/result1.jpeg" alt="필기 정답 입력">
+        </div>
+        <div class="featured-meta">
+          <div class="featured-tags">
+            <span class="company-dot tag-gnwl"></span>
+            <span>개념원리</span>
+            <span class="dot-sep">·</span>
+            <span>2024.06 → 2024.07</span>
+          </div>
+          <div class="featured-title">필기로 정답 입력 기능</div>
+          <div class="featured-impact">600여 명이 <strong>15,000건+</strong> 사용 · 풀이 시간 <strong>17%</strong> 단축</div>
+          <div class="featured-desc">AI팀의 컴퓨터 비전 모델과 협업해 필기 → 수식 변환 기능 기획. 수식 키보드의 불편함을 근본적으로 해결.</div>
+        </div>
+      </a>
+
+      <a href="works/sns-marketing.html" class="featured-work" data-case="sns-marketing">
+        <div class="featured-thumb">
+          <img src="assets/works/sns-marketing/nobeyube.png" alt="SNS 마케팅">
+        </div>
+        <div class="featured-meta">
+          <div class="featured-tags">
+            <span class="company-dot tag-gnwl"></span>
+            <span>개념원리</span>
+            <span class="dot-sep">·</span>
+            <span>2023.10 → 2024.02</span>
+          </div>
+          <div class="featured-title">앱/SNS 마케팅 콘텐츠</div>
+          <div class="featured-impact">수능 콘텐츠 <strong>30만 view</strong> · 가입자 <strong>+30%</strong> 상승</div>
+          <div class="featured-desc">비용 0원으로 신규 유입과 리텐션을 동시에 끌어올린 캠페인. 노베/유베 테스트, 크리스마스 칭호 이벤트로 DAU 신고점 회복.</div>
+        </div>
+      </a>
+
+    </div>
+
+    <h2 id="all-projects" class="section-title">All Projects</h2>
+    <p class="section-lede">전체 12개 프로젝트. 회사별로 필터링할 수 있습니다.</p>
+
+    <div class="filter-chips" id="filter-chips">
+      <button class="filter-chip is-active" data-filter="all" type="button">All <span class="filter-count">12</span></button>
+      <button class="filter-chip" data-filter="gnwl" type="button"><span class="company-dot tag-gnwl"></span>개념원리 <span class="filter-count">6</span></button>
+      <button class="filter-chip" data-filter="letuin" type="button"><span class="company-dot tag-letuin"></span>렛유인에듀 <span class="filter-count">5</span></button>
+      <button class="filter-chip" data-filter="ukpj" type="button"><span class="company-dot tag-ukpj"></span>유쾌한프로젝트 <span class="filter-count">1</span></button>
+    </div>
+
+    <div class="works-grid" id="all-projects-grid">
+
+      <a href="works/clify.html" class="work-card" data-case="clify" data-company="ukpj">
+        <div class="work-title">클라이피 앱 기획</div>
+        <div class="work-desc">B2C+B2B EAP 통합 앱을 11주 만에 양 스토어 동시 런칭</div>
+        <div class="work-tags">
+          <span class="tag tag-ukpj">유쾌한프로젝트</span>
+        </div>
+        <div class="work-period">2024.12 → 2025.03 · 기여도 80%</div>
+      </a>
+
+      <a href="works/naesin.html" class="work-card" data-case="naesin" data-company="gnwl">
+        <div class="work-title">EGRIT 내신 학습관</div>
+        <div class="work-desc">기존 API 큐레이션으로 주말 DAU +68% / 최대 MAU 달성</div>
+        <div class="work-tags">
+          <span class="tag tag-gnwl">개념원리</span>
+        </div>
+        <div class="work-period">2024.10 → 2024.11 · 기여도 100%</div>
+      </a>
+
+      <a href="works/study-chat.html" class="work-card" data-case="study-chat" data-company="gnwl">
+        <div class="work-title">스터디그룹 채팅 서비스</div>
+        <div class="work-desc">웹소켓 기반 실시간 채팅 + 신고 BOS 기획</div>
+        <div class="work-tags">
+          <span class="tag tag-gnwl">개념원리</span>
+        </div>
+        <div class="work-period">2024.07 → 2024.09 · 기여도 100%</div>
+      </a>
+
+      <a href="works/handwriting.html" class="work-card" data-case="handwriting" data-company="gnwl">
+        <div class="work-title">필기로 정답 입력 기능</div>
+        <div class="work-desc">AI팀과 협업한 CV 기반 필기 인식 (풀이 시간 17% 단축)</div>
+        <div class="work-tags">
+          <span class="tag tag-gnwl">개념원리</span>
+        </div>
+        <div class="work-period">2024.06 → 2024.07 · 기여도 100%</div>
+      </a>
+
+      <a href="works/sns-marketing.html" class="work-card" data-case="sns-marketing" data-company="gnwl">
+        <div class="work-title">앱/SNS 마케팅 콘텐츠</div>
+        <div class="work-desc">비용 0원으로 30만 view + DAU 회복 캠페인</div>
+        <div class="work-tags">
+          <span class="tag tag-gnwl">개념원리</span>
+        </div>
+        <div class="work-period">2023.10 → 2024.02 · 기여도 80%</div>
+      </a>
+
+      <a href="works/textbook.html" class="work-card" data-case="textbook" data-company="gnwl">
+        <div class="work-title">에그릿–개념원리 교재 연계</div>
+        <div class="work-desc">교재 사용자를 앱 이용자로 전환하는 서비스</div>
+        <div class="work-tags">
+          <span class="tag tag-gnwl">개념원리</span>
+        </div>
+        <div class="work-period">2023.10 → 2024.01 · 기여도 50%</div>
+      </a>
+
+      <a href="works/curriculum.html" class="work-card" data-case="curriculum" data-company="gnwl">
+        <div class="work-title">에그릿 커리큘럼 콘텐츠</div>
+        <div class="work-desc">개념·유형 카드 등 862개 콘텐츠 제작</div>
+        <div class="work-tags">
+          <span class="tag tag-gnwl">개념원리</span>
+        </div>
+        <div class="work-period">2023.06 → 2023.10 · 기여도 50%</div>
+      </a>
+
+      <a href="works/xr.html" class="work-card" data-case="xr" data-company="letuin">
+        <div class="work-title">반도체 XR 교육</div>
+        <div class="work-desc">XR 기반 반도체 공정 장비 운용 콘텐츠 (SEDEX2022 출품)</div>
+        <div class="work-tags">
+          <span class="tag tag-letuin">렛유인에듀</span>
+        </div>
+        <div class="work-period">2022.06 → 2023.05 · 기여도 50%</div>
+      </a>
+
+      <a href="works/carla.html" class="work-card" data-case="carla" data-company="letuin">
+        <div class="work-title">자동차 X 프로그래밍 융합 교육</div>
+        <div class="work-desc">CARLA 기반 자율주행 프로그래밍 클래스</div>
+        <div class="work-tags">
+          <span class="tag tag-letuin">렛유인에듀</span>
+        </div>
+        <div class="work-period">2022.07 → 2023.02 · 기여도 70%</div>
+      </a>
+
+      <a href="works/letuniversity.html" class="work-card" data-case="letuniversity" data-company="letuin">
+        <div class="work-title">렛유니버시티</div>
+        <div class="work-desc">방학 이벤트를 위한 메타버스 캠퍼스 (ZEP)</div>
+        <div class="work-tags">
+          <span class="tag tag-letuin">렛유인에듀</span>
+        </div>
+        <div class="work-period">2022.04 → 2023.01 · 기여도 100%</div>
+      </a>
+
+      <a href="works/company-color.html" class="work-card" data-case="company-color" data-company="letuin">
+        <div class="work-title">기업컬러테스트</div>
+        <div class="work-desc">성향 기반 기업 추천 서비스 (4,000명+ 응시)</div>
+        <div class="work-tags">
+          <span class="tag tag-letuin">렛유인에듀</span>
+        </div>
+        <div class="work-period">2022.02 · 기여도 100%</div>
+      </a>
+
+      <a href="works/lbti.html" class="work-card" data-case="lbti" data-company="letuin">
+        <div class="work-title">LBTI TEST</div>
+        <div class="work-desc">이공계 직무 추천 서비스 (누적 24,000명+ 응시)</div>
+        <div class="work-tags">
+          <span class="tag tag-letuin">렛유인에듀</span>
+        </div>
+        <div class="work-period">2021.07 → 2021.08 · 기여도 70%</div>
+      </a>
+
+    </div>
+
+    <section id="philosophy" class="manifesto">
+      <div class="manifesto-quote">
+        “행복은 자신이 하고 싶은 것을 하는 것.”
+      </div>
+      <p class="manifesto-text">
+        제 일의 출발점입니다.<br>
+        누군가 자신이 하고 싶은 것을 찾고 그것을 해낼 수 있도록 돕는 서비스를 만들어왔습니다.<br>
+        앞으로도 그런 일을 하겠습니다.
+      </p>
+    </section>
+
+    <footer>
+      <div class="footer-cta">
+        <a href="mailto:kkpark9352@gmail.com">kkpark9352@gmail.com</a>
+        <span class="footer-sep">·</span>
+        <a href="https://www.linkedin.com/in/kaykyungkeunpark/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+      <div class="footer-built">
+        이 페이지는 <a href="https://claude.com/product/claude-code" target="_blank" rel="noopener">Claude Code</a>로 직접 만들었습니다.
+      </div>
+      <div class="footer-copy">© 2026 Kay / KyungKeun Park</div>
+    </footer>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- Case Modal -->
+  <div class="case-modal" id="case-modal" hidden aria-hidden="true">
+    <div class="case-modal-overlay" data-close></div>
+    <aside class="case-modal-panel" role="dialog" aria-modal="true" aria-labelledby="case-modal-title">
+      <button class="case-modal-close" data-close type="button" aria-label="닫기">✕</button>
+      <div class="case-modal-content" id="case-modal-content"></div>
+    </aside>
+  </div>
+
+  <!-- Lightbox (이미지 확대) -->
+  <div class="lightbox" id="lightbox" hidden aria-hidden="true">
+    <div class="lightbox-overlay" data-close></div>
+    <button class="lightbox-close" data-close type="button" aria-label="닫기">✕</button>
+    <button class="lightbox-nav prev" data-lightbox-prev type="button" aria-label="이전 이미지">‹</button>
+    <button class="lightbox-nav next" data-lightbox-next type="button" aria-label="다음 이미지">›</button>
+    <figure class="lightbox-content">
+      <img class="lightbox-img" alt="">
+      <figcaption class="lightbox-caption"></figcaption>
+      <div class="lightbox-counter"></div>
+    </figure>
+  </div>
+
+  <script>
+    // Dark mode toggle with localStorage + system preference fallback
+    (function() {
+      const KEY = 'kp-theme';
+      const stored = localStorage.getItem(KEY);
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const initial = stored || (prefersDark ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', initial);
+
+      const btn = document.getElementById('theme-toggle');
+      if (btn) {
+        btn.addEventListener('click', () => {
+          const cur = document.documentElement.getAttribute('data-theme');
+          const next = cur === 'dark' ? 'light' : 'dark';
+          document.documentElement.setAttribute('data-theme', next);
+          localStorage.setItem(KEY, next);
+        });
+      }
+    })();
+
+    // Case modal — Selected Cases 슬라이드 패널
+    (function() {
+      const cases = {
+        clify: {
+          company: '유쾌한프로젝트', companyClass: 'tag-ukpj',
+          period: '2024.12 → 2025.03', contribution: '80%',
+          title: '클라이피 앱 기획',
+          summary: '기존 웹사이트를 통째로 대체할 B2C+B2B EAP 통합 앱을 11주 만에 양 스토어에 런칭.',
+          hero: 'assets/works/clify/flow-home.png',
+          metrics: [
+            { num: '11', unit: '주', label: '기획 → 양 스토어 런칭' },
+            { num: 'B2C+B2B', unit: '', label: 'EAP 통합 앱' }
+          ],
+          problem: [
+            '입사 후 단 한 건의 구매도 일어나지 않은 기존 웹사이트',
+            '상담사가 카카오톡·줌·개인 계정으로 분산된 상담 시스템',
+            '외주 업체 계약 종료 + 담당자 퇴사 + 인수인계 자료 미흡'
+          ],
+          decisions: [
+            { title: '기존 자원 활용 포기, 처음부터 다시 설계', detail: '재활용보다 신규 설계가 11주 안에 더 빠름' },
+            { title: 'LLM·Sandbird는 비용 시뮬레이션 먼저', detail: '신규 영역은 운영 비용으로 의사결정 사전 정렬' },
+            { title: '기능정의서를 동작 단위로 작성', detail: '개발자가 바로 구현 가능한 ID 부여 + 진행률 시각화' }
+          ],
+          features: [
+            { title: 'LLM 상담사 추천', desc: '고민 입력 → 주제 도출 → 매칭', detail: '여러 모델의 입출력 토큰 비용을 시뮬레이션 후 OpenAI LLM 채택. 프롬프트 엔지니어링 + 파인튜닝으로 도메인 특화.' },
+            { title: '미션 + 마음배터리', desc: '튜토리얼을 미션화한 리텐션 장치', detail: '5단계 미션을 30초 → 50분 순으로 점진적 배치, 메인 기능(심리검사·상담)까지 자연스럽게 진입. 완료 시 마음배터리로 지속 동기 부여.' },
+            { title: '샌드버드 SDK', desc: '채팅·음성·화상 통합 솔루션', detail: '여러 솔루션 비교 후 통합 SDK 채택. 분산되어 있던 상담사 계정 운영 부담 제거 + 사용 매뉴얼 직접 제작·배포.' },
+            { title: '외부 API 연동', desc: '본인인증 · 결제 · 알림톡', detail: '다날(본인인증), 나이스페이먼츠(결제), NHN클라우드(알림톡)를 비용·안정성 비교로 선정. 개발 일정과 운영 정책 모두 사전 문서화.' },
+            { title: 'QA 자동 워크플로', desc: 'Notion 티켓 + Slack 알림 자동화', detail: '기능 ID 단위 QA 시트 → 버그 1클릭 시 개발자 Notion 페이지 티켓 자동 생성 + 프로젝트 Slack 채널 알림. 티켓 상태가 시트에 실시간 반영.' }
+          ],
+          screens: [
+            { src: 'assets/works/clify/flow-signin.png', caption: '가입/로그인 Flow (Figjam)' },
+            { src: 'assets/works/clify/flow-booking.png', caption: '상담 예약 Flow' },
+            { src: 'assets/works/clify/flow-mypage.png', caption: '마이페이지 Flow' }
+          ],
+          impact: [
+            '11주 만에 App Store / Play Store 동시 런칭 (2025.03.10)',
+            '기존 웹사이트 100% 대체',
+            '4개 핵심 기획 목표 모두 달성'
+          ],
+          reflection: '"기능정의서를 개발자가 동작 단위까지 읽을 수 있게 짠 것 + LLM 같은 신규 영역은 비용 시뮬레이션으로 사전 정렬한 것."'
+        },
+        naesin: {
+          company: '개념원리', companyClass: 'tag-gnwl',
+          period: '2024.10 → 2024.11', contribution: '100%',
+          title: 'EGRIT 내신 학습관',
+          summary: '백엔드 1인이 주 2일만 가능한 제약에서 신규 기능 0 + 기존 API 큐레이션으로 내신 대비 동선을 설계.',
+          hero: 'assets/works/naesin/main-screen.png',
+          metrics: [
+            { num: '+68', unit: '%', label: '주말 DAU 상승' },
+            { num: '+118', unit: '%', label: '주말 가입자' },
+            { num: '53.3', unit: '%', label: '신규 유저 리텐션' }
+          ],
+          problem: [
+            '중간고사 신규 유저 D1 리텐션 43.5% — 기존 유저(53.5%) 대비 10%p 낮음',
+            '"내신 대비"라는 진입 목적을 해결할 기능 자체가 없음',
+            '백엔드 1인 주 2일 = 신규 기능 만들 시간 자체가 부족'
+          ],
+          decisions: [
+            { title: '신규 기능 0, 기존 API 큐레이션 전략', detail: '리소스 제약을 "안 만든다"는 결정으로 풀어냄' },
+            { title: '시험범위 필터 세분화만 BE에 추가', detail: '필수 변경 1건으로 한정' },
+            { title: '앱 개발자/디자이너 full-time 활용', detail: 'BE 부담을 FE/디자인 쪽으로 분산' }
+          ],
+          features: [
+            { title: '내신 학습관 진입 버튼', desc: '메인 동선 신규 진입점', detail: '메인 화면 상단에 시험 시즌에만 활성화되는 토글 형태로 배치. 일상 시즌엔 노이즈 제거.' },
+            { title: '첫 사용자 온보딩', desc: '학습 흐름 한눈에 가이드', detail: '시험범위 입력 → 학습 메뉴 추천까지 3단계 인터랙션. 한 번 본 유저는 다시 안 뜨도록 정책 설계.' },
+            { title: '세분화된 시험범위 필터', desc: '학교별 시험범위 모두 커버', detail: '기존 단원 단위 필터를 소단원·예제 번호 단위로 분할. 모든 학교의 변형된 시험범위 패턴을 하나의 BE 변경으로 흡수.' },
+            { title: '학습 기능 큐레이션', desc: '드릴 / 모의고사 / 사전 / 오답', detail: '신규 기능 0개. 기존 4개 기능을 "내신" 동선으로 묶고 각 진입점을 한 화면에 카드로 정리. BE 작업 최소화.' }
+          ],
+          screens: [
+            { src: 'assets/works/naesin/onboarding-flowchart.png', caption: '유저 플로우차트 (Figma)' },
+            { src: 'assets/works/naesin/entry-button.png', caption: '내신 학습관 진입 버튼' },
+            { src: 'assets/works/naesin/onboarding.png', caption: '첫 사용자 온보딩' }
+          ],
+          impact: [
+            '주말 가입자 +117.9% (목표 +100% 초과)',
+            '주말 DAU +68.1% (목표 +60% 초과)',
+            '신규 유저 리텐션 53.3% 달성',
+            '앱 런칭 후 최대 WAU · MAU 달성',
+            'DAU/MAU 비율 11.4% → 14.6%'
+          ],
+          reflection: '"PM의 핵심은 \'무엇을 만들지\'가 아니라 \'무엇을 안 만들지\'를 정하는 것."'
+        },
+        handwriting: {
+          company: '개념원리', companyClass: 'tag-gnwl',
+          period: '2024.06 → 2024.07', contribution: '100%',
+          title: '필기로 정답 입력 기능',
+          summary: 'AI팀의 컴퓨터 비전 모델과 협업해 필기 → 수식 변환 기능을 4주 만에 출시.',
+          hero: 'assets/works/handwriting/result1.jpeg',
+          metrics: [
+            { num: '600', unit: '명', label: '4주간 활성 사용자' },
+            { num: '15K', unit: '+', label: '누적 사용 건수' },
+            { num: '17', unit: '%', label: '평균 풀이 시간 단축' }
+          ],
+          problem: [
+            '수식 키보드는 분수·지수·문자 입력이 복잡해 풀이 시간 증가',
+            '"답 입력하다 틀려요", "y/z가 안 보여요" 등 VOC 다수',
+            '수식 키보드 자체가 풀이 흐름의 병목'
+          ],
+          decisions: [
+            { title: 'AI팀의 CV 모델과 협업', detail: '기획자가 모델을 만들지 않고 협업으로 푼다' },
+            { title: '"정답 일부만 수정 불가" 제약을 받아들임', detail: '기술 제약은 인정, UX로 우회' },
+            { title: '피드백 루프를 처음부터 정책에 포함', detail: '운영 프로세스를 정책서에 명시' }
+          ],
+          features: [
+            { title: '첫 사용자 튜토리얼', desc: '인식 정확도 기대치 조정', detail: '시작 전 "AI라 100% 정확하지 않을 수 있다"는 사전 안내로 첫 인상 관리. 기능 자체보다 기대치 설계가 사용성을 결정.' },
+            { title: '필기 영역 지정', desc: '인식 대상을 유저가 통제', detail: '자유 영역 드래그로 인식할 부분만 추출. 풀이 중 낙서·중간 계산은 자동 제외되어 인식 정확도 ↑.' },
+            { title: '인식 결과 미리보기', desc: '제출 전 검증 단계', detail: 'AI 인식 → LaTeX 변환 결과를 한 번 더 확인. 잘못 인식되면 기존 수식 키보드로 폴백 가능 (기능 단절 방지).' },
+            { title: '정확도 피드백 신고', desc: '유저가 직접 오류 리포팅', detail: '인식 오류 시 1클릭 신고 버튼. 누적 데이터를 모델 재학습에 활용 + 운영 프로세스를 정책서에 명시해 유지보수 일상화.' }
+          ],
+          screens: [
+            { src: 'assets/works/handwriting/flow.png', caption: '필기 인식 유저 플로우차트' },
+            { src: 'assets/works/handwriting/result2.jpeg', caption: '인식 결과 미리보기 화면' }
+          ],
+          impact: [
+            '4주간 600여 명이 15,000건+ 사용',
+            '분석 대상 90개 문항 중 80%에서 풀이 시간 단축',
+            '평균 17% 단축, 개별 문항 최대 63% 단축',
+            '다수의 긍정 VOC ("인식을 너무 잘해요")'
+          ],
+          reflection: '"AI 기획자에게 가장 중요한 건 모델의 정확도가 아니라, 오류가 났을 때 어떻게 회복할지."'
+        },
+        'sns-marketing': {
+          company: '개념원리', companyClass: 'tag-gnwl',
+          period: '2023.10 → 2024.02', contribution: '80%',
+          title: '앱/SNS 마케팅 콘텐츠 캠페인',
+          summary: '비용 0원으로 신규 유입 + 기존 유저 리텐션을 동시에 끌어올린 캠페인.',
+          hero: 'assets/works/sns-marketing/nobeyube.png',
+          metrics: [
+            { num: '30', unit: '만', label: '수능 콘텐츠 view' },
+            { num: '+30', unit: '%', label: '가입자 상승률' },
+            { num: '+23', unit: '%', label: '크리스마스 DAU 회복' }
+          ],
+          problem: [
+            '앱 런칭 직후 매출 부재 → 마케팅 비용 0원',
+            '신규 유입과 기존 유저 리텐션을 동시에 잡아야 함',
+            '12월 말 DAU 저점이 예상되는 시기'
+          ],
+          decisions: [
+            { title: '"본질적으로 공유될 메시지"로 풀어냄', detail: '비용 대신 콘텐츠 자체의 바이럴성에 베팅' },
+            { title: '채널 분산 설계 (X · 스모어 · 앱 내)', detail: '각 채널의 용도를 명확히 분리' },
+            { title: '단발 아닌 캠페인 시스템 구축', detail: '여러 콘텐츠가 서로 보완하는 구조' }
+          ],
+          features: [
+            { title: '수능 노가다 풀이 콘텐츠', desc: 'X 타깃, 재미 위주 비-노골 마케팅', detail: '매년 수능에 출제되는 확률과 통계 노가다 풀이 가능 문항을 분석. 시험 당일 업로드 타이밍으로 30만 view 확보 + 가입자 +30%.' },
+            { title: '노베/유베 테스트', desc: '스모어 OX 테스트로 중간 전환', detail: '고1 수학 선행 학생 타깃. 결과별로 적합한 앱 기능(개념사전·드릴·커리큘럼·교재연계)을 매칭하여 추천 → 자연스러운 다운로드 유도.' },
+            { title: '크리스마스 칭호 이벤트', desc: '앱 내 업적 시스템 활용한 리텐션', detail: '12월 신규 출시한 업적·칭호 시스템 활용. "접속 + 25문제" 두 단계 업적으로 가벼운 → 깊은 참여 유도. 단순 업적 달성자의 59%가 노력 업적까지 완료.' }
+          ],
+          screens: [
+            { src: 'assets/works/sns-marketing/christmas-event.jpeg', caption: '크리스마스 칭호 이벤트' }
+          ],
+          impact: [
+            '수능 콘텐츠 X에서 30만 view, 가입자 +30%',
+            '노베/유베 2주간 1,000명+ 응시, 완료율 80%',
+            '크리스마스 이벤트 DAU +23.4% / +22.4% 회복',
+            '단순 업적 달성자 중 59%가 "노력 필요 업적"까지'
+          ],
+          reflection: '"비용 0원의 본질은 \'메시지의 힘\'이 아니라 \'채널 분산 설계\'다."'
+        },
+        'study-chat': {
+          company: '개념원리', companyClass: 'tag-gnwl',
+          period: '2024.07 → 2024.09', contribution: '100%',
+          title: '스터디그룹 채팅 서비스',
+          summary: '시험 직후 DAU 하락을 방어하기 위한 웹소켓 기반 실시간 채팅 + 신고 BOS를 함께 설계.',
+          hero: 'assets/works/study-chat/chat-room.png',
+          metrics: [
+            { num: '70', unit: '%대', label: '스터디 진입 → 채팅 전환' },
+            { num: '11', unit: '건', label: 'VOC로 검증된 니즈' }
+          ],
+          problem: [
+            '스터디그룹 추가 후 4달간 VOC 2위가 "다른 유저와 소통" (120건 중 11건)',
+            '시험 직후 DAU 하락 방어 필요 (평시 대비 60% 수준)',
+            '3개월간 소통 관련 업데이트 부재'
+          ],
+          decisions: [
+            { title: '웹소켓으로 실시간 통신 채택', detail: '실시간 메시지 + 입장 전 미리보기까지 가능' },
+            { title: '"읽음 처리"·"답장" 기능은 1차 출시에서 제외', detail: '로딩 부담을 줄여 출시 일정 우선' },
+            { title: '신고 처리는 별도 BOS로 분리 설계', detail: '운영팀 도구를 분리해 유연성 확보' }
+          ],
+          features: [
+            { title: '실시간 채팅', desc: '웹소켓 + 입장 전 미리보기', detail: '채팅방 최신 메시지를 진입 전 카드 형태로 노출. 안 읽은 메시지 수도 함께 표시.' },
+            { title: '메시지 부가 기능', desc: '복사 · 신고 · 삭제 (권한별)', detail: '1초 탭으로 바텀 모달, 그룹장은 모든 메시지 삭제 가능, 일반 유저는 본인 메시지만.' },
+            { title: '채팅 정책', desc: '최대 1,000자 + 줄 수 제한', detail: '모바일 20줄 / 태블릿 6줄 우선 표시 + "전체보기"로 확장. 강퇴 시 토스트 메시지 처리.' },
+            { title: '신고 BOS', desc: '검색 필터 + 검토 팝업 + 처벌 정책', detail: '피신고/신고 유저, 타입, 사유, 상태로 필터링. 신고 히스토리·처벌 기록까지 한 화면에서 검토.' }
+          ],
+          screens: [
+            { src: 'assets/works/study-chat/flowchart.png', caption: '채팅 서비스 유저 플로우차트' },
+            { src: 'assets/works/study-chat/admin-flow.png', caption: '신고 BOS 관리자 플로우차트' },
+            { src: 'assets/works/study-chat/entry.png', caption: '채팅방 진입 버튼' },
+            { src: 'assets/works/study-chat/menu.png', caption: '채팅방 메뉴' }
+          ],
+          impact: [
+            '스터디그룹 이용자 대비 채팅방 진입 비율 70%대 유지',
+            '실패 분석: 스터디그룹 자체 이용률(5-7%) 낮음 → 후속 조치 도출',
+            '후속 조치 계획 수립 (질문 공유, 동일 교재 그룹화 등)'
+          ],
+          reflection: '"기능은 잘 만들었지만 진입로 자체가 좁았다. 결과가 나빴을 때 원인을 정확히 분석한 것이 다음 가설로 이어졌다."'
+        },
+        textbook: {
+          company: '개념원리', companyClass: 'tag-gnwl',
+          period: '2023.10 → 2024.01', contribution: '50%',
+          title: '에그릿–개념원리 교재 연계 서비스',
+          summary: '교재 매출을 보호하면서도 교재 사용자를 앱 이용자로 전환하는 분석 기반 학습 설계.',
+          hero: 'assets/works/textbook/quick-answer.png',
+          metrics: [
+            { num: '675', unit: '명', label: '20일간 이용자' },
+            { num: '36.5K', unit: '+', label: '풀이 데이터' }
+          ],
+          problem: [
+            '교재로만 공부하는 학생은 본인 실력 측정이 어려움',
+            '교재와 같은 문제를 앱에 노출하면 교재 매출에 부정적',
+            '교재 풀이 데이터를 앱에 기록해야 분석이 가능'
+          ],
+          decisions: [
+            { title: '교재 문제는 노출 X, 정오만 체크', detail: '교재 매출을 지키면서 데이터를 확보하는 한 가지 방법' },
+            { title: '4권 × 30차시 커리큘럼으로 표준화', detail: '교재 단위가 아니라 학습 단위로 분해' },
+            { title: '"찍어서 맞춤 / 실수로 틀림" 분류 도입', detail: '단순 정오답을 학생 실력 대비 난이도로 재해석' }
+          ],
+          features: [
+            { title: '선행 개념 리스트', desc: '차시별 진입 화면', detail: '필요한 선행 개념을 영상·개념카드로 즉시 열람. 모르는 개념을 우선 학습.' },
+            { title: '정오 체크 화면', desc: '교재 문제 노출 없이 빠른 입력', detail: '정답·해설을 보면서 정오만 체크. 교재 매출 보호 + 데이터 수집 양립.' },
+            { title: '추가 문제 풀이', desc: '교재 외 문제로 분석 정밀도 ↑', detail: '차시별 문항 수와 난이도를 고려해 출제. 실력 측정의 노이즈를 줄임.' },
+            { title: '차시 분석 + 추천 복습', desc: '학생을 그룹화하여 맞춤 복습', detail: '교재/추가 문제 정답률 조합으로 학생 그룹 분류, 그룹별 복습 로직 차별화.' }
+          ],
+          screens: [
+            { src: 'assets/works/textbook/analysis.png', caption: '차시별 상세 분석 페이지' }
+          ],
+          impact: [
+            '서비스 오픈 후 20일간 총 675명 이용 (교재 별 중복 포함)',
+            '36,500여 풀이 데이터 확보',
+            '교재 매출에 부정적 영향 0'
+          ],
+          reflection: '"비즈니스 제약(교재 매출)을 무시하지 않고 그 안에서 가치를 만든 사례."'
+        },
+        curriculum: {
+          company: '개념원리', companyClass: 'tag-gnwl',
+          period: '2023.06 → 2023.10', contribution: '50%',
+          title: 'EGRIT 커리큘럼 콘텐츠 제작',
+          summary: '에그릿 앱의 기본이 되는 교육용 콘텐츠 862개 + 학습 로직 설계. 누적 110만+ 풀이, 오류율 0.04%.',
+          hero: 'assets/works/curriculum/reference.png',
+          metrics: [
+            { num: '862', unit: '개', label: '제작 콘텐츠' },
+            { num: '110', unit: '만+', label: '누적 풀이 (120일)' },
+            { num: '0.04', unit: '%', label: '오류 신고 비율' }
+          ],
+          problem: [
+            '학생이 수학을 어렵게 느끼는 이유 1위 "공부 안 함"(28%), 2위 "개념 어려움"(24%)',
+            '시장의 B2C 수학 앱은 게임/포인트/리워드 위주, 콘텐츠 퀄리티는 후순위',
+            '혼자서 개념·유형 학습을 이어갈 수 있는 콘텐츠가 부족'
+          ],
+          decisions: [
+            { title: '콘텐츠 퀄리티를 차별화 포인트로', detail: '동기부여 장치보다 본질(콘텐츠 자체)에 베팅' },
+            { title: '개념카드(빈칸) + 개념OX(짧은 학습) 분리', detail: '학습 상황(여유/짧은 시간)에 따른 두 가지 형태' },
+            { title: '드릴학습 4단계 구성', detail: '눈으로 풀기 → 기본 → 실전 → 고득점 (난이도 점진)' }
+          ],
+          features: [
+            { title: '개념카드', desc: '소단원별 핵심 개념 빈칸 채우기', detail: '주요 용어에 빈 칸을 만들어 학습 후 이해도 확인 가능. 자기주도 학습 흐름.' },
+            { title: '개념OX', desc: '모바일 환경 짧은 학습용', detail: '등하교 등 짧은 시간에 모바일로 빠르게 풀어볼 수 있는 OX 형식.' },
+            { title: '유형카드', desc: '유형별 풀이법 설명', detail: '유형에 속한 문제들을 효과적으로 풀 수 있도록 가이드.' },
+            { title: '드릴학습 로직', desc: '4단계 무제한 문제 풀이', detail: '눈으로 풀기 / 기본기 / 실전 연습 / 고득점으로 세분화. 난이도 + 학습 의도별 분기.' }
+          ],
+          impact: [
+            '수학2 + 선택 3종(확률통계/미적분/기하) 862개 콘텐츠',
+            '오픈 120일 기준 일 풀이수 최대 15,400건',
+            '총 누적 풀이수 110만건+',
+            '오류 신고 비율 0.04% (목표 0.1% 미만 달성)'
+          ],
+          reflection: '"분석 페이지의 학습 연결이 데이터 한계로 미흡했던 부분이 다음 라운드에서 새 기능 기획의 출발점이 되었다."'
+        },
+        lbti: {
+          company: '렛유인에듀', companyClass: 'tag-letuin',
+          period: '2021.07 → 2021.08', contribution: '70%',
+          title: 'LBTI TEST',
+          summary: '이공계 취준생을 위한 데이터 기반 직무 추천 서비스. 2024년 1월 기준 누적 24,000명+ 응시.',
+          metrics: [
+            { num: '24K', unit: '+', label: '누적 응시자' },
+            { num: '1,100', unit: '명', label: '오픈 7일 응시' },
+            { num: '17', unit: '직무', label: '4대 공학 분야' }
+          ],
+          problem: [
+            '이공계 대기업 면접자 90%+가 직무 이해도 질문을 받음',
+            '대부분의 취준생은 본인에게 맞는 직무를 모름',
+            '대기업 공채 50일 전 빠른 사용자 확보 + 회사 개발 인력 부족'
+          ],
+          decisions: [
+            { title: '"심리테스트가 아니라 데이터 기반 추천"으로 차별화', detail: '단순 재미 위주 서비스가 아니라 신뢰할 수 있는 추천 도구로' },
+            { title: '4대 공학 분야 17개 직무로 좁힘', detail: '범위를 줄여 추천 정밀도 ↑' },
+            { title: '입력값을 9개 카테고리로 표준화', detail: '학과/과목/자격증/대외활동/연구/논문 등 정량화 가능한 입력' }
+          ],
+          features: [
+            { title: '9개 카테고리 입력 폼', desc: '본인 스펙을 표준 입력', detail: '학과/전공지식/자격증/대외활동/수료증/인턴/특허/논문/Tool까지 표준화.' },
+            { title: '점수 산정 알고리즘', desc: '직무별 가중치로 추천도 계산', detail: '입력값별로 직무 연관성 가중치 부여. 관심 산업 1순위 + 그 외 2-3순위 추천 로직.' },
+            { title: '결과 페이지', desc: '적합도 % + 합격자 평균 비교', detail: '직무 적합도와 함께 합격자 평균 점수와 본인 스펙을 항목별로 비교 노출.' },
+            { title: '콘텐츠 추천 연결', desc: '부족 스펙 → 자사 강의 추천', detail: '결과 페이지에서 자사 NCS 자격증·교육 자연스럽게 연결.' }
+          ],
+          impact: [
+            '오픈 7일 1,100명 응시 (목표 1,000명 초과)',
+            '2024년 1월 기준 누적 24,000명+ 응시',
+            '80여 대학 학과 + 13인 현직자 인터뷰로 데이터 신뢰도 확보'
+          ],
+          reflection: '"수치 기반 추천이라는 콘셉트가 누적 24,000명을 만들었다. 단발 캠페인이 아니라 자료 자체가 콘텐츠가 되도록."'
+        },
+        'company-color': {
+          company: '렛유인에듀', companyClass: 'tag-letuin',
+          period: '2022.02', contribution: '100%',
+          title: '기업컬러테스트',
+          summary: '개발 인력 0인 상황에서 노코드 + 현직자 인터뷰로 만든 성향 기반 기업 추천 서비스.',
+          metrics: [
+            { num: '4,031', unit: '명', label: '2주간 응시' },
+            { num: '35.7', unit: '%', label: 'CTA 클릭률 (MBTI 평균 ×2+)' }
+          ],
+          problem: [
+            '취준생은 취업 전까지 기업 문화를 알기 어려움',
+            '신규 유저 유입 채널 부족 (네이버/구글 검색, 지인 추천만)',
+            '15일 내 런칭 + 회사 개발 인력 0'
+          ],
+          decisions: [
+            { title: '개발 인력 0 → 노코드 툴 SMORE 활용', detail: '기획자 단독으로 런칭 가능한 스택 선택' },
+            { title: '17개 기업 → 컬러 매핑으로 차별화', detail: '단순 추천이 아니라 "삼성=갤럭시 블루" 같은 메모러블한 결과' },
+            { title: 'LBTI(직무 추천) 연결로 다단계 전환 설계', detail: '기업 추천 → 직무 추천 흐름으로 재방문 유도' }
+          ],
+          features: [
+            { title: 'SMORE 심리테스트', desc: '13문항 성향 분석', detail: '출퇴근, 자율성, 회식문화 등 13가지 문항 + 보기별 기업 점수 부여.' },
+            { title: '기업별 컬러 매핑', desc: '기업 특징을 색으로 시각화', detail: '결과 페이지에서 기업 컬러 + 인재상 + 문화 정리. 메모러블한 인상 남김.' },
+            { title: 'LBTI CTA 연결', desc: '결과 → 직무 추천 흐름', detail: '심리테스트 평균 CTA 15% 대비 35.7% 기록. 정보성 콘텐츠의 전환력 검증.' },
+            { title: '다채널 홍보 전략', desc: '오픈카톡 + 에브리타임 + 카페', detail: '카카오톡(공유율 32%) vs 에브리타임(전환율 40%) — 채널별 데이터 확보.' }
+          ],
+          impact: [
+            '2주간 4,031명 응시 (목표 6,000명 미달)',
+            '결과 페이지 CTA 클릭률 35.7% (MBTI 평균 15% 대비 2배+)',
+            '채널별 전환율 데이터 확보 → 다음 캠페인의 기준점',
+            'LBTI 898명 전환'
+          ],
+          reflection: '"목표는 못 채웠지만 채널별 전환율 데이터가 다음 캠페인의 기준점이 되었다. 실패에서 배운 게 더 많은 케이스."'
+        },
+        letuniversity: {
+          company: '렛유인에듀', companyClass: 'tag-letuin',
+          period: '2022.04 → 2023.01', contribution: '100%',
+          title: '렛유니버시티 (메타버스 캠퍼스)',
+          summary: '코로나 시기 오프라인 집체교육 대체용 ZEP 메타버스 캠퍼스. 단일 이벤트당 500명+ 접속.',
+          metrics: [
+            { num: '500', unit: '명+', label: '단일 이벤트 접속' },
+            { num: '4', unit: '시즌', label: '방학 정기 운영' }
+          ],
+          problem: [
+            '코로나19로 오프라인 집체교육 불가',
+            '방학 시기 무료 이벤트(특강/멘토링)를 진행할 공간 필요',
+            '새로운 형태의 사용자 경험으로 차별화 시도 필요'
+          ],
+          decisions: [
+            { title: '메타버스 플랫폼 ZEP 선정', detail: '당시 한국에서 가장 적극적으로 활용되던 플랫폼' },
+            { title: '메인은 외주, 세부 공간은 직접 제작', detail: '컨셉/품질이 중요한 공간만 외주, 빠른 회전이 필요한 곳은 자체 제작' },
+            { title: '방학마다 정기 이벤트 운영', detail: '단발이 아닌 시즌 콘텐츠로 안착' }
+          ],
+          features: [
+            { title: '메인 캠퍼스 공간', desc: '외주 협업 + 컨셉 기획', detail: '브랜드 인상을 결정하는 공간이라 디자인 외주 업체와 협업 + 기획안 작성.' },
+            { title: '세부 목적 공간', desc: '직접 제작', detail: '멘토링룸, 특강룸, 미니게임룸 등 목적별로 직접 기획·제작 (Adobe Illustrator + ZEP 툴).' },
+            { title: '이벤트 운영 시스템', desc: '특강 / 멘토링 / 미니게임', detail: '방학마다 정기 운영, 단일 이벤트 당 500명 내외 접속.' }
+          ],
+          impact: [
+            '단일 이벤트 당 500명 내외 유저 접속',
+            '오프라인 대체재로서의 가능성 검증',
+            '코로나 이후에도 무료 이벤트 채널로 활용'
+          ],
+          reflection: '"당시 메타버스가 트렌드였지만 결국 콘텐츠가 본질이라는 것을 배운 프로젝트."'
+        },
+        xr: {
+          company: '렛유인에듀', companyClass: 'tag-letuin',
+          period: '2022.06 → 2023.05', contribution: '50%',
+          title: '반도체 XR 교육',
+          summary: 'XR로 반도체 공정 장비 운용을 체험할 수 있는 교육 콘텐츠. SEDEX2022 출품.',
+          metrics: [
+            { num: '3', unit: '대', label: '구현 장비 (PVD/CVD/ICP)' },
+            { num: '6→3', unit: '건', label: '시나리오 직접 작성' }
+          ],
+          problem: [
+            '반도체 공정 실습 교육은 취업 필수 스펙이지만 가격 부담',
+            '장비 크기/설치 환경 등으로 일반 접근 어려워 대기 몇 달',
+            'B2B로도 확장 가능한 차별화된 교육 콘텐츠 필요'
+          ],
+          decisions: [
+            { title: 'XR(체험형 가상현실)로 시공간 제약 해결', detail: '대기 시간 0 + 가격 부담 해소' },
+            { title: '핵심 3대 장비 우선 모델링', detail: 'PVD / CVD / ICP-Etcher — 사용 빈도 높은 장비부터' },
+            { title: '"사용법" 아닌 "이슈 해결 시나리오"로 콘텐츠 구성', detail: '실제 공정에서 발생하는 문제를 푸는 흐름이 학습 효과 ↑' }
+          ],
+          features: [
+            { title: 'XR 시뮬레이션 환경', desc: 'HTC VIVE Pro + Unreal engine', detail: '실제 반도체 공정 환경을 체험형 가상현실로 구현.' },
+            { title: '장비 모델링', desc: 'PVD / CVD / ICP-Etcher', detail: '실제 비주얼·동작을 충실히 재현해 사용자 학습 곡선 축소.' },
+            { title: '이슈 해결 시나리오', desc: '6건 중 3건 직접 작성', detail: '실제 공정 문제 상황을 시뮬레이션 → 학생이 해결 과정을 직접 체험.' }
+          ],
+          impact: [
+            'SEDEX2022 출품 → 취업준비생 + 학교 + 기업 교육 담당자 호평',
+            'B2B 교육 시장 확장 가능성 입증'
+          ],
+          reflection: '"기술이 가능성을 만든다는 것을 가장 명확하게 본 프로젝트."'
+        },
+        carla: {
+          company: '렛유인에듀', companyClass: 'tag-letuin',
+          period: '2022.07 → 2023.02', contribution: '70%',
+          title: '자율주행 프로그래밍 클래스 (CARLA)',
+          summary: '자동차 도메인 + 프로그래밍을 결합한 융합 교육. 오프라인 호평으로 온라인 과정으로도 확장.',
+          metrics: [
+            { num: '오프 → 온', unit: '', label: '온라인 과정 확장' },
+            { num: '1', unit: '위', label: '당시 비-현대 그룹 유일' }
+          ],
+          problem: [
+            '자동차 산업 부흥 + 자율주행 발전 → 제조업 개발자 채용 증가',
+            '자동차 도메인 + 프로그래밍을 결합한 교육 부재 (현대그룹 외 시도 없음)',
+            '차별화된 융합 교육 콘텐츠 필요'
+          ],
+          decisions: [
+            { title: '오픈소스 python + CARLA 활용', detail: '진입 장벽 낮추고 학습 비용 절감' },
+            { title: '강사 직접 섭외 + 협업 커리큘럼 설계', detail: '도메인 전문성을 외부에서 확보' },
+            { title: '오프라인 시범 운영 후 온라인 확장', detail: '검증 후 스케일' }
+          ],
+          features: [
+            { title: '자율주행 시뮬레이션 실습', desc: 'python 기반 CARLA 활용', detail: '실제 자율주행 알고리즘을 시뮬레이션 환경에서 직접 구현.' },
+            { title: 'CARLA 툴 커리큘럼', desc: '단계별 실습 구성', detail: '환경 설정 → 기본 조작 → 알고리즘 적용까지 단계별 커리큘럼.' },
+            { title: '도메인 + 기술 융합 교안', desc: '자동차 + 프로그래밍 통합', detail: '강사와 협업하여 도메인 지식과 코딩 실습을 한 강의에 통합.' }
+          ],
+          impact: [
+            '오프라인 강의 고객 호평',
+            '온라인 과정으로 확장 (지속 매출 확보)'
+          ],
+          reflection: '"도메인 + 기술 융합 시장이 비어있을 때 먼저 들어가는 것의 가치."'
+        }
+      };
+
+      const modal = document.getElementById('case-modal');
+      const content = document.getElementById('case-modal-content');
+      let lastFocus = null;
+
+      function escapeHtml(s) {
+        return String(s).replace(/[&<>"']/g, c => ({
+          '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+        }[c]));
+      }
+
+      function renderCase(c) {
+        const metricsHtml = c.metrics.map(m => `
+          <div class="case-metric">
+            <div class="case-metric-num">${escapeHtml(m.num)}<span class="case-metric-unit">${escapeHtml(m.unit)}</span></div>
+            <div class="case-metric-label">${escapeHtml(m.label)}</div>
+          </div>
+        `).join('');
+
+        const problemHtml = c.problem.map(item => `<li>${escapeHtml(item)}</li>`).join('');
+        const impactHtml = c.impact.map(item => `<li>${escapeHtml(item)}</li>`).join('');
+
+        const decisionsHtml = c.decisions.map((d, i) => `
+          <div class="case-decision">
+            <div class="case-decision-num">${String(i + 1).padStart(2, '0')}</div>
+            <div class="case-decision-body">
+              <div class="case-decision-title">${escapeHtml(d.title)}</div>
+              <div class="case-decision-detail">${escapeHtml(d.detail)}</div>
+            </div>
+          </div>
+        `).join('');
+
+        const featuresHtml = c.features.map(f => `
+          <div class="case-feature">
+            <div class="case-feature-title">${escapeHtml(f.title)}</div>
+            <div class="case-feature-desc">${escapeHtml(f.desc)}</div>
+            ${f.detail ? `<div class="case-feature-detail">${escapeHtml(f.detail)}</div>` : ''}
+          </div>
+        `).join('');
+
+        const screensHtml = (c.screens && c.screens.length) ? `
+          <div class="case-carousel" data-carousel>
+            <button class="carousel-btn prev" type="button" aria-label="이전 이미지">‹</button>
+            <div class="carousel-track" data-track>
+              ${c.screens.map(s => `
+                <figure class="case-screen" data-lightbox-src="${escapeHtml(s.src)}" data-lightbox-caption="${escapeHtml(s.caption)}">
+                  <div class="case-screen-img">
+                    <img src="${escapeHtml(s.src)}" alt="${escapeHtml(s.caption)}" loading="lazy">
+                  </div>
+                  <figcaption class="case-screen-caption">${escapeHtml(s.caption)}</figcaption>
+                </figure>
+              `).join('')}
+            </div>
+            <button class="carousel-btn next" type="button" aria-label="다음 이미지">›</button>
+          </div>
+        ` : '';
+
+        return `
+          <header class="case-header">
+            <div class="case-meta">
+              <span class="company-dot ${c.companyClass}"></span>
+              <span>${escapeHtml(c.company)}</span>
+              <span class="dot-sep">·</span>
+              <span>${escapeHtml(c.period)}</span>
+              <span class="dot-sep">·</span>
+              <span>기여도 ${escapeHtml(c.contribution)}</span>
+            </div>
+            <h2 class="case-title" id="case-modal-title">${escapeHtml(c.title)}</h2>
+            <p class="case-summary">${escapeHtml(c.summary)}</p>
+          </header>
+
+          ${c.hero ? `
+          <div class="case-hero">
+            <img src="${escapeHtml(c.hero)}" alt="${escapeHtml(c.title)}">
+          </div>
+          ` : ''}
+
+          <div class="case-metrics">${metricsHtml}</div>
+
+          <section class="case-section">
+            <h3 class="case-section-title">Problem</h3>
+            <ul class="case-bullet-list">${problemHtml}</ul>
+          </section>
+
+          <section class="case-section">
+            <h3 class="case-section-title">Key Decisions</h3>
+            <div class="case-decisions">${decisionsHtml}</div>
+          </section>
+
+          <section class="case-section">
+            <h3 class="case-section-title">Solution</h3>
+            <div class="case-features">${featuresHtml}</div>
+          </section>
+
+          ${screensHtml ? `
+          <section class="case-section">
+            <h3 class="case-section-title">Reference Images</h3>
+            ${screensHtml}
+          </section>
+          ` : ''}
+
+          <section class="case-section">
+            <h3 class="case-section-title">Impact</h3>
+            <ul class="case-impact-list">${impactHtml}</ul>
+          </section>
+
+          <section class="case-section">
+            <h3 class="case-section-title">Reflection</h3>
+            <blockquote class="case-pullquote">${escapeHtml(c.reflection)}</blockquote>
+          </section>
+        `;
+      }
+
+      // Lightbox
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = lightbox.querySelector('.lightbox-img');
+      const lightboxCaption = lightbox.querySelector('.lightbox-caption');
+      const lightboxCounter = lightbox.querySelector('.lightbox-counter');
+      const lightboxPrev = lightbox.querySelector('[data-lightbox-prev]');
+      const lightboxNext = lightbox.querySelector('[data-lightbox-next]');
+      let lightboxList = [];
+      let lightboxIndex = 0;
+
+      function showLightboxItem() {
+        const item = lightboxList[lightboxIndex];
+        if (!item) return;
+        lightboxImg.src = item.src;
+        lightboxImg.alt = item.caption || '';
+        lightboxCaption.textContent = item.caption || '';
+        const total = lightboxList.length;
+        lightboxCounter.textContent = total > 1 ? `${lightboxIndex + 1} / ${total}` : '';
+        // prev/next 버튼은 1장일 땐 숨김, 끝/처음일 땐 disabled
+        const showNav = total > 1;
+        lightboxPrev.style.display = showNav ? '' : 'none';
+        lightboxNext.style.display = showNav ? '' : 'none';
+        lightboxPrev.disabled = lightboxIndex <= 0;
+        lightboxNext.disabled = lightboxIndex >= total - 1;
+      }
+
+      function openLightbox(list, index) {
+        lightboxList = list;
+        lightboxIndex = index;
+        showLightboxItem();
+        lightbox.hidden = false;
+        lightbox.setAttribute('aria-hidden', 'false');
+        requestAnimationFrame(() => lightbox.classList.add('is-open'));
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove('is-open');
+        lightbox.setAttribute('aria-hidden', 'true');
+        setTimeout(() => {
+          lightbox.hidden = true;
+          lightboxImg.src = '';
+          lightboxList = [];
+        }, 200);
+      }
+
+      function lightboxPrevHandler() {
+        if (lightboxIndex > 0) { lightboxIndex--; showLightboxItem(); }
+      }
+      function lightboxNextHandler() {
+        if (lightboxIndex < lightboxList.length - 1) { lightboxIndex++; showLightboxItem(); }
+      }
+
+      lightboxPrev.addEventListener('click', (e) => { e.stopPropagation(); lightboxPrevHandler(); });
+      lightboxNext.addEventListener('click', (e) => { e.stopPropagation(); lightboxNextHandler(); });
+
+      lightbox.addEventListener('click', (e) => {
+        if (e.target.matches('[data-close]') || e.target.closest('[data-close]')) {
+          closeLightbox();
+        }
+      });
+
+      // Carousel init (모달 콘텐츠 동적이므로 매번 호출)
+      function initCarousel(root) {
+        const track = root.querySelector('[data-track]');
+        const prev = root.querySelector('.carousel-btn.prev');
+        const next = root.querySelector('.carousel-btn.next');
+        if (!track) return;
+
+        const cardWidth = () => {
+          const first = track.querySelector('.case-screen');
+          if (!first) return 240;
+          const style = getComputedStyle(track);
+          const gap = parseFloat(style.columnGap || style.gap) || 14;
+          return first.offsetWidth + gap;
+        };
+
+        prev.addEventListener('click', () => track.scrollBy({ left: -cardWidth(), behavior: 'smooth' }));
+        next.addEventListener('click', () => track.scrollBy({ left: cardWidth(), behavior: 'smooth' }));
+
+        const updateBtns = () => {
+          prev.disabled = track.scrollLeft <= 4;
+          next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 4;
+        };
+        track.addEventListener('scroll', updateBtns, { passive: true });
+        // 초기 상태
+        setTimeout(updateBtns, 100);
+
+        // 이미지 클릭 → 라이트박스 (list + index)
+        const figures = Array.from(track.querySelectorAll('[data-lightbox-src]'));
+        const items = figures.map(f => ({ src: f.dataset.lightboxSrc, caption: f.dataset.lightboxCaption }));
+        figures.forEach((fig, i) => {
+          fig.addEventListener('click', (e) => {
+            e.preventDefault();
+            openLightbox(items, i);
+          });
+        });
+      }
+
+      function openModal(id) {
+        const c = cases[id];
+        if (!c) return;
+        content.innerHTML = renderCase(c);
+        content.scrollTop = 0;
+        modal.hidden = false;
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+        // Animation trigger
+        requestAnimationFrame(() => modal.classList.add('is-open'));
+        lastFocus = document.activeElement;
+        const closeBtn = modal.querySelector('.case-modal-close');
+        if (closeBtn) closeBtn.focus();
+        // Carousel init
+        const carousel = content.querySelector('[data-carousel]');
+        if (carousel) initCarousel(carousel);
+        // Update hash for sharable URL
+        if (location.hash !== `#case=${id}`) history.replaceState(null, '', `#case=${id}`);
+      }
+
+      function closeModal() {
+        modal.classList.remove('is-open');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+        // Wait for transition before hiding
+        setTimeout(() => {
+          modal.hidden = true;
+          content.innerHTML = '';
+        }, 220);
+        if (lastFocus) lastFocus.focus();
+        if (location.hash.startsWith('#case=')) history.replaceState(null, '', location.pathname + location.search);
+      }
+
+      // Card click — open modal (Selected + All Projects 모두)
+      document.querySelectorAll('[data-case]').forEach(card => {
+        card.addEventListener('click', (e) => {
+          e.preventDefault();
+          openModal(card.dataset.case);
+        });
+      });
+
+      // Close handlers
+      modal.addEventListener('click', (e) => {
+        if (e.target.matches('[data-close]') || e.target.closest('[data-close]')) {
+          closeModal();
+        }
+      });
+      // 키보드 핸들러: ESC 닫기, ← → 라이트박스 이동
+      document.addEventListener('keydown', (e) => {
+        if (!lightbox.hidden) {
+          if (e.key === 'Escape') { closeLightbox(); return; }
+          if (e.key === 'ArrowLeft') { lightboxPrevHandler(); return; }
+          if (e.key === 'ArrowRight') { lightboxNextHandler(); return; }
+          return;
+        }
+        if (e.key === 'Escape' && !modal.hidden) closeModal();
+      });
+
+      // Open from URL hash on load
+      const initialHash = location.hash.match(/^#case=(.+)$/);
+      if (initialHash && cases[initialHash[1]]) {
+        // small delay to ensure layout
+        setTimeout(() => openModal(initialHash[1]), 50);
+      }
+
+      // All Projects 회사별 필터 칩
+      const filterChips = document.querySelectorAll('.filter-chip');
+      const projectGrid = document.getElementById('all-projects-grid');
+      if (filterChips.length && projectGrid) {
+        const projectCards = projectGrid.querySelectorAll('[data-company]');
+        filterChips.forEach(chip => {
+          chip.addEventListener('click', () => {
+            const filter = chip.dataset.filter;
+            filterChips.forEach(c => c.classList.toggle('is-active', c === chip));
+            projectCards.forEach(card => {
+              const show = filter === 'all' || card.dataset.company === filter;
+              card.style.display = show ? '' : 'none';
+            });
+          });
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
