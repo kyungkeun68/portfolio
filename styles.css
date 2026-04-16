@@ -868,12 +868,12 @@ code {
 }
 
 .hero-headline {
-  font-size: 36px;
+  font-size: 48px;
   font-weight: 800;
-  line-height: 1.25;
-  letter-spacing: -0.02em;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
   color: var(--text);
-  margin: 0 0 18px;
+  margin: 0 0 20px;
 }
 
 .hero-headline-accent {
@@ -906,7 +906,7 @@ code {
 }
 
 @media (max-width: 700px) {
-  .hero-headline { font-size: 26px; }
+  .hero-headline { font-size: 30px; }
 }
 
 /* Section title — How I Work, Selected Cases 등 공통 */
@@ -1105,8 +1105,8 @@ code {
 .impact-num-unit {
   font-size: 26px;
   font-weight: 700;
-  color: var(--accent);
-  margin-left: 2px;
+  color: var(--text);
+  margin-left: 6px;
 }
 
 .impact-num-label {
