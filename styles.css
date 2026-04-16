@@ -1264,6 +1264,20 @@ code {
   border-color: var(--text);
 }
 
+.filter-chip:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  background: var(--bg);
+  color: var(--text-muted);
+  border-style: dashed;
+}
+
+.filter-chip:disabled:hover {
+  background: var(--bg);
+  color: var(--text-muted);
+  border-color: var(--border);
+}
+
 .filter-chip.is-active .company-dot {
   /* 활성 상태에서도 컬러 dot은 유지 */
   box-shadow: 0 0 0 1.5px var(--bg);
