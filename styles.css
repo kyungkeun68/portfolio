@@ -1171,6 +1171,89 @@ code {
   transform: scale(1.04);
 }
 
+/* 이미지 없는 Featured Hero — 텍스트 카드 */
+.featured-thumb.featured-thumb-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+  background: linear-gradient(135deg, var(--bg-soft) 0%, var(--accent-soft) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.featured-thumb.featured-thumb-text::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 48px;
+  height: 4px;
+  background: var(--accent);
+}
+
+.featured-thumb-big {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+
+.featured-thumb-small {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-soft);
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+@media (max-width: 700px) {
+  .featured-thumb-big { font-size: 26px; }
+}
+
+/* 모달 안 텍스트 Hero */
+.case-hero.case-hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 32px 24px;
+  background: linear-gradient(135deg, var(--bg-soft) 0%, var(--accent-soft) 100%);
+  position: relative;
+}
+
+.case-hero.case-hero-text::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 56px;
+  height: 4px;
+  background: var(--accent);
+}
+
+.case-hero-big {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+
+.case-hero-small {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-soft);
+  margin-top: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
 .featured-meta {
   padding: 18px 20px 20px;
   display: flex;
@@ -1724,8 +1807,8 @@ footer {
 .case-metric-unit {
   font-size: 18px;
   font-weight: 700;
-  color: var(--accent);
-  margin-left: 2px;
+  color: var(--text);
+  margin-left: 6px;
 }
 
 .case-metric-label {
