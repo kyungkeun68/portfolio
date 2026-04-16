@@ -236,9 +236,150 @@ body {
 
 @media (max-width: 900px) {
   .layout { flex-direction: column; }
-  .sidebar { width: 100%; border-right: none; border-bottom: 1px solid var(--border); }
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    /* 모바일에선 sticky 풀고 자연 스크롤 */
+    position: static;
+    max-height: none;
+    overflow: visible;
+  }
   .sidebar-inner { padding: 32px 24px; }
   .container { padding: 24px; }
+}
+
+/* ============================
+   모바일 레이아웃 통합 보강 (~700px)
+   ============================ */
+@media (max-width: 700px) {
+  /* Sidebar inner — 패딩 살짝 더 줄임 */
+  .sidebar-inner { padding: 28px 20px 24px; }
+
+  /* Identity (사진 + 이름) */
+  .identity { gap: 14px; margin-bottom: 16px; }
+  .profile-photo {
+    width: 88px;
+    height: 88px;
+    font-size: 36px;
+  }
+  .identity .title { font-size: 26px; }
+  .identity .title .en { font-size: 12px; margin-top: 4px; }
+
+  /* Tagline */
+  .tagline { font-size: 13px; padding: 10px 12px 10px 14px; }
+
+  /* Contact */
+  .contact-item { font-size: 12px; }
+
+  /* Anchor nav — 모바일에선 가운데 nav 링크 숨김, 우상단 floating action만 표시 */
+  .anchor-nav {
+    position: fixed;
+    top: 12px;
+    right: 12px;
+    left: auto;
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border: none;
+    z-index: 50;
+    padding: 0;
+  }
+  .anchor-nav-inner {
+    padding: 0;
+    gap: 0;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 6px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  }
+  .anchor-nav-links { display: none; }
+  .anchor-nav-actions { gap: 6px; }
+  .pdf-button { padding: 5px 10px; font-size: 11px; }
+  .icon-button { width: 30px; height: 28px; }
+
+  /* Container */
+  .container { padding: 24px 20px 36px; }
+
+  /* Hero */
+  .hero { margin: 16px 0 20px; }
+  .hero-eyebrow { margin-bottom: 12px; font-size: 11px; }
+  .hero-headline { font-size: 24px; line-height: 1.3; }
+  .hero-bio { font-size: 14px; line-height: 1.7; }
+  .hero-bio-coda { font-size: 13px; }
+
+  /* Section title */
+  .section-title { font-size: 12px; margin-top: 44px; }
+  .section-lede { font-size: 13px; margin-bottom: 14px; }
+
+  /* Impact numbers — 1 col + 컴팩트 */
+  .impact-numbers { gap: 10px; margin: 22px 0 12px; }
+  .impact-num-card { padding: 18px 18px; }
+  .impact-num { font-size: 36px; }
+  .impact-num-unit { font-size: 22px; }
+
+  /* Principle — 인디케이터 작게 */
+  .principle {
+    grid-template-columns: 36px 1fr;
+    gap: 12px;
+    padding: 20px 0;
+  }
+  .principle-num { font-size: 12px; }
+  .principle-title { font-size: 16px; line-height: 1.4; }
+  .principle-desc { font-size: 13.5px; }
+  .principle-tag { font-size: 10px; }
+
+  /* Featured Works — 1 col 강제 (이미 700px 미디어에 있지만 확실히) */
+  .featured-works { grid-template-columns: 1fr; gap: 14px; }
+  .featured-thumb { aspect-ratio: 16 / 11; }
+  .featured-title { font-size: 17px; }
+
+  /* All Projects */
+  .works-grid { grid-template-columns: 1fr; gap: 10px; }
+  .work-card { padding: 14px 16px; }
+
+  /* Filter chips */
+  .filter-chips { gap: 6px; margin: 14px 0 16px; }
+  .filter-chip { padding: 6px 12px; font-size: 12px; }
+
+  /* Skills (사이드바) */
+  .ability-row {
+    grid-template-columns: 130px 1fr 32px;
+    gap: 10px;
+    padding: 7px 0;
+    font-size: 12.5px;
+  }
+  .abilities-group { margin: 10px 0 16px; }
+
+  /* Profile cards (사이드바) */
+  .profile-card-label { font-size: 10px; }
+  .profile-card-body { padding: 10px 12px; font-size: 12.5px; }
+
+  /* Carousel — 카드 폭을 viewport 비율로, 버튼 숨김 (스와이프) */
+  .case-carousel { margin: 0 -20px; }
+  .case-screen { flex: 0 0 78vw; max-width: 320px; }
+  .case-screen-img { height: 56vw; max-height: 360px; }
+  .carousel-track { padding: 4px 20px; }
+  .carousel-btn { display: none; }
+
+  /* Modal — 모바일 콘텐츠 패딩 + 헤더 */
+  .case-modal-content { padding: 52px 20px 32px; }
+  .case-title { font-size: 22px; }
+  .case-summary { font-size: 14px; }
+  .case-section { margin: 22px 0; }
+  .case-decision { padding: 12px 14px; gap: 10px; grid-template-columns: 26px 1fr; }
+  .case-features { grid-template-columns: 1fr; gap: 10px; }
+  .case-pullquote { padding: 16px 18px; font-size: 14px; }
+
+  /* Manifesto */
+  .manifesto { margin: 60px 0 32px; padding: 26px 0; }
+  .manifesto-quote { font-size: 18px; line-height: 1.4; margin-bottom: 12px; }
+  .manifesto-text { font-size: 13px; line-height: 1.7; }
+
+  /* Footer */
+  .footer-cta { font-size: 12px; flex-wrap: wrap; }
+  .footer-built { font-size: 11px; }
 }
 
 .page-icon {
