@@ -344,8 +344,8 @@
     <p class="section-lede">전체 15개 프로젝트. 회사별로 필터링할 수 있습니다.</p>
 
     <div class="filter-chips" id="filter-chips">
-      <button class="filter-chip is-active" data-filter="all" type="button">All <span class="filter-count">15</span></button>
-      <button class="filter-chip" data-filter="crabs" type="button">크랩스 <span class="filter-count">3</span></button>
+      <button class="filter-chip is-active" data-filter="all" type="button">All <span class="filter-count">16</span></button>
+      <button class="filter-chip" data-filter="crabs" type="button">크랩스 <span class="filter-count">4</span></button>
       <button class="filter-chip" data-filter="ukpj" type="button">유쾌한프로젝트 <span class="filter-count">1</span></button>
       <button class="filter-chip" data-filter="gnwl" type="button">개념원리 <span class="filter-count">6</span></button>
       <button class="filter-chip" data-filter="letuin" type="button">렛유인에듀 <span class="filter-count">5</span></button>
@@ -378,6 +378,15 @@
           <span class="tag tag-ukpj">유쾌한프로젝트</span>
         </div>
         <div class="work-period">2024.12 → 2025.03 · 기여도 80%</div>
+      </a>
+
+      <a href="#case=prompt-eng" class="work-card" data-case="prompt-eng" data-company="crabs">
+        <div class="work-title">AI 영상 생성 프롬프트 엔지니어링</div>
+        <div class="work-desc">Kling O3 · Seedance 2.0 멀티모델 프롬프트 연구·설계·구현 (3 repo 직접 작업)</div>
+        <div class="work-tags">
+          <span class="tag tag-crabs">크랩스</span>
+        </div>
+        <div class="work-period">2025.09 → 2026.04 · 기여도 80%</div>
       </a>
 
       <a href="#case=b2b-arch" class="work-card" data-case="b2b-arch" data-company="crabs">
@@ -836,6 +845,44 @@
             '백엔드 개발자 리소스 의존도 없이 운영 디테일을 채움'
           ],
           reflection: '"엔터프라이즈 운영 도구는 화려한 기능이 아니라 작은 UX 디테일의 합. PM이 직접 채워야 클라이언트 대응 속도가 다르다."'
+        },
+        'prompt-eng': {
+          company: '크랩스', companyClass: 'tag-crabs',
+          period: '2025.09 → 2026.04 (진행 중)', contribution: '80%',
+          title: 'AI 영상 생성 프롬프트 엔지니어링',
+          summary: 'Kling O3 · Seedance 2.0 등 멀티모델 영상 생성 파이프라인의 프롬프트를 직접 연구·설계·구현. 3개 리포(프론트/백/AI)에 걸쳐 코드까지 작성.',
+          heroText: { big: '프롬프트 엔지니어링', small: '멀티모델 영상 생성 파이프라인' },
+          metrics: [
+            { num: '2', unit: '모델', label: 'Kling O3 + Seedance 2.0' },
+            { num: '163', unit: '개', label: '프롬프트 수집 (94 + 69)' },
+            { num: '33', unit: '패턴', label: '도출 (12 + 21)' }
+          ],
+          problem: [
+            '기존 영상 생성 파이프라인이 Sora 2 정책에 의존 — 모든 모델이 같은 프롬프트 구조를 공유',
+            'Kling O3 · Seedance 2.0 등 신규 모델의 강점(native audio-visual sync, 보존 명령 어휘 등)이 프롬프트에 반영되지 않음',
+            '모델별로 프롬프트 구조가 달라야 하는데, 시스템에 모델 분기 구조가 없음'
+          ],
+          decisions: [
+            { title: '모델별 1차 자료 직접 수집 — 163개 프롬프트 분석, 33개 패턴 도출', detail: 'Kling O3: 94개 프롬프트 → 12패턴 (보존 동사 · 카메라 보수성 · Constraints 블록 등). Seedance 2.0: 69개 프롬프트 → 21패턴 (6-Step 공식 · 타임라인 프롬프팅 · 스타일 템플릿 등)' },
+            { title: 'Seedance 2.0 공식 6단계 공식을 프롬프트 생성기로 구현', detail: 'Subject+Action+Environment+Camera+Style+Constraints 기반 LLM 프롬프트 생성 + 폴백 조립기' },
+            { title: '모델별 프롬프트 프로필을 분리 설계', detail: '기존 Sora 2 단일 정책 → 모델 × 카테고리 조합으로 정책 분기하는 구조의 첫 활용' }
+          ],
+          features: [
+            { title: 'Kling O3 프롬프트 리서치', desc: '94개 검증 프롬프트 수집 · 12개 패턴 도출', detail: '보존 명령 어휘(keep > maintain > preserve), 카메라 보수성(6-8도 회전), 조명 능동태 동사, Constraints 블록 형식 등 모델 특화 어휘 체계 정리.' },
+            { title: 'Seedance 2.0 프롬프트 리서치', desc: '69개 검증 프롬프트 수집 · 21개 패턴 도출', detail: '중국어 소스 중심. 공식 6-Step 공식, 8차원 중문 공식, 카메라 운동 키워드 속기표, 16가지 스타일 템플릿, 타임라인 프롬프팅, 캐릭터 일관성, 네거티브 프롬프트 등 체계적 정리.' },
+            { title: 'Seedance 2.0 R2V 프롬프트 생성기', desc: 'ai-api 366줄 신규 모듈', detail: '공식 6단계 공식 기반 LLM 프롬프트 생성. LLM 실패 시 폴백 조립기로 안전하게 동작.' },
+            { title: 'Kling O3 전용 프롬프트 빌더', desc: '카테고리별 슬롯 우선순위 분리', detail: 'cinematic_ad 특화 — 8개 메서드 모두 오버라이드. Sora 2 의존을 끊고 모델 축 정책 최초 활용.' },
+            { title: '씬별 비디오 프롬프트 파이프라인', desc: '스토리보드 → 씬 → 프롬프트', detail: '마스터 스토리보드 파싱 → 씬별 비디오 프롬프트 생성 → Remotion 코드 프롬프트까지 연결.' },
+            { title: '멀티모델 Descriptor 레지스트리', desc: 'Kling Turbo / Veo 3.1 / Grok 등록', detail: '신규 모델 추가 시 descriptor만 등록하면 파이프라인이 자동 분기되는 확장 구조.' },
+            { title: '테넌트별 모델 선택 UI', desc: '프론트엔드 직접 구현', detail: 'AI 에이전트 모드에서 Sora / Seedance 선택 UI + 기본 영상 길이 8초 → 12초 변경.' }
+          ],
+          impact: [
+            'Sora 2 단일 의존 → Kling O3 · Seedance 2.0 · Veo 3.1 등 멀티모델 지원 구조 확립',
+            '94개 1차 자료 기반으로 모델별 프롬프트 어휘 체계 정립',
+            '3개 리포(프론트/백/AI)에 걸쳐 PM이 직접 코드까지 작성',
+            'Seedance 2.0을 기본 비디오 모델로 전환 완료'
+          ],
+          reflection: '"프롬프트 엔지니어링은 모델의 언어를 배우는 일. 1차 자료 94개를 직접 분석한 것이 모든 설계의 신뢰도를 만들었다."'
         },
         'study-chat': {
           company: '개념원리', companyClass: 'tag-gnwl',
