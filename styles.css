@@ -345,7 +345,7 @@ body {
 
   /* Skills (사이드바) */
   .ability-row {
-    grid-template-columns: 130px 1fr 32px;
+    grid-template-columns: 110px 1fr 72px;
     gap: 10px;
     padding: 7px 0;
     font-size: 12.5px;
@@ -1465,7 +1465,7 @@ code {
 .ability-row {
   position: relative;
   display: grid;
-  grid-template-columns: 150px 1fr 36px;
+  grid-template-columns: 130px 1fr 80px;
   gap: 12px;
   align-items: center;
   padding: 8px 0;
@@ -1507,10 +1507,12 @@ code {
 
 .ability-bar-pct {
   position: static;
-  font-size: 12px;
+  font-size: 10.5px;
   color: var(--text-muted);
-  font-weight: 600;
+  font-weight: 700;
   text-align: right;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
 /* 상세 설명: 평소에는 숨기고 hover 시 툴팁으로 표시 */
@@ -2258,6 +2260,126 @@ footer {
 .mb-0 { margin-bottom: 0; }
 
 /* ============================
+   PDF Mode Modal
+   ============================ */
+.pdf-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 110;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+.pdf-modal[hidden] { display: none; }
+
+.pdf-modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.22s ease;
+  cursor: pointer;
+}
+.pdf-modal.is-open .pdf-modal-overlay {
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.pdf-modal-panel {
+  position: relative;
+  width: 100%;
+  max-width: 460px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+  padding: 26px 24px 22px;
+  transform: scale(0.96);
+  opacity: 0;
+  transition: transform 0.18s ease, opacity 0.18s ease;
+}
+.pdf-modal.is-open .pdf-modal-panel {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.pdf-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 12px;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.12s, border-color 0.12s;
+}
+.pdf-modal-close:hover {
+  background: var(--bg-soft);
+  border-color: var(--text-muted);
+}
+
+.pdf-modal-title {
+  margin: 0 0 6px;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text);
+}
+.pdf-modal-desc {
+  margin: 0 0 18px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.pdf-modal-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.pdf-modal-option {
+  text-align: left;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 16px;
+  cursor: pointer;
+  color: var(--text);
+  transition: background 0.12s, border-color 0.12s, transform 0.12s;
+  font-family: inherit;
+}
+.pdf-modal-option:hover {
+  border-color: var(--text-muted);
+  transform: translateY(-1px);
+}
+.pdf-modal-option-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.pdf-modal-option-desc {
+  font-size: 12.5px;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+  line-height: 1.45;
+}
+.pdf-modal-option-hint {
+  font-size: 10.5px;
+  color: var(--text-muted);
+  opacity: 0.75;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-weight: 700;
+}
+
+/* Case Print Container — 인쇄 완전 버전에서만 노출 */
+.case-print-container { display: none; }
+
+/* ============================
    Print styles (PDF 출력용)
    ============================ */
 @media print {
@@ -2278,6 +2400,8 @@ footer {
   .pdf-button,
   .icon-button,
   .case-modal,
+  .pdf-modal,
+  .footer-built,
   .reveal summary {
     display: none !important;
   }
@@ -2327,10 +2451,329 @@ footer {
   h2, h3 { page-break-after: avoid; }
   .featured-work, .work-card, .impact-num-card { page-break-inside: avoid; }
   .timeline-item { page-break-inside: avoid; }
+  footer {
+    margin-top: 24pt;
+    padding: 14pt 0 0;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .footer-cta {
+    margin-bottom: 4pt;
+    font-size: 10pt;
+  }
+  .footer-copy {
+    font-size: 9pt;
+  }
+
+  /* Key Impact는 새 페이지에서 시작 */
+  #key-impact {
+    break-before: page;
+    page-break-before: always;
+  }
+  #key-impact, #key-impact .impact-item { page-break-inside: avoid; }
+
+  /* Manifesto는 마지막 페이지에 따로 */
+  #philosophy {
+    break-before: page;
+    page-break-before: always;
+    page-break-inside: avoid;
+  }
 
   /* 링크 컬러 처리 */
   a { color: #000; text-decoration: none; }
 
   /* 외부 폰트 fallback (오프라인 인쇄 대비) */
   body { font-family: 'Pretendard', -apple-system, sans-serif; }
+
+  /* Skills: 인쇄용 레이아웃 (타이포그래피 위계 — 박스/디바이더 없음) */
+  .ability-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    cursor: default;
+    page-break-inside: avoid;
+    padding: 9px 0;
+  }
+  .ability-name {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 10.5pt;
+    font-weight: 700;
+    line-height: 1;
+  }
+  .ability-bar {
+    display: none !important;
+  }
+  .ability-bar-pct {
+    display: inline-block;
+    font-size: 7.5pt;
+    font-weight: 700;
+    color: #aaa !important;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+    line-height: 1;
+    text-align: left;
+  }
+  .ability-desc {
+    flex-basis: 100%;
+    display: block !important;
+    position: static !important;
+    background: transparent !important;
+    color: #555 !important;
+    font-size: 9.5pt;
+    line-height: 1.55;
+    padding: 4px 0 0 22px !important;
+    margin: 0;
+    border: 0 !important;
+    box-shadow: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    pointer-events: auto !important;
+    transition: none !important;
+  }
+  .ability-desc::before {
+    display: none !important;
+  }
+
+  /* Hero: 인쇄용 타이포그래피 (한 줄에 들어가게 축소) */
+  .hero-eyebrow { font-size: 9pt; margin-bottom: 8pt; }
+  .hero-headline { font-size: 18pt; line-height: 1.3; margin: 0 0 12pt; letter-spacing: -0.015em; }
+  .hero-bio { font-size: 10.5pt; line-height: 1.6; margin: 0; max-width: none; }
+  .hero-bio-coda { font-size: 10pt; margin: 10pt 0 0; }
+
+  /* 간단 버전 (이력서) — 핵심만 */
+  body.is-printing-resume #all-projects,
+  body.is-printing-resume #all-projects + .section-lede,
+  body.is-printing-resume .filter-chips,
+  body.is-printing-resume .works-grid,
+  body.is-printing-resume #philosophy,
+  body.is-printing-resume .featured-thumb {
+    display: none !important;
+  }
+
+  /* 완전 버전 — Selected Cases + All Projects 모두 숨김 (디테일이 대체) */
+  body.is-printing-full #works,
+  body.is-printing-full #works + .section-lede,
+  body.is-printing-full .featured-works,
+  body.is-printing-full #all-projects,
+  body.is-printing-full #all-projects + .section-lede,
+  body.is-printing-full .filter-chips,
+  body.is-printing-full .works-grid {
+    display: none !important;
+  }
+
+  /* 완전 버전 — 보조 케이스 (works/*.html에서 fetch한 HTML) */
+  body.is-printing-full .case-print-secondary h2 {
+    font-size: 11pt;
+    font-weight: 700;
+    margin: 14pt 0 6pt;
+    color: #222;
+  }
+  body.is-printing-full .case-print-secondary h3 {
+    font-size: 10pt;
+    font-weight: 700;
+    margin: 10pt 0 4pt;
+    color: #333;
+  }
+  body.is-printing-full .case-print-secondary h4 {
+    font-size: 9.5pt;
+    font-weight: 700;
+    margin: 8pt 0 3pt;
+    color: #555;
+  }
+  body.is-printing-full .case-print-secondary p {
+    font-size: 9.5pt;
+    line-height: 1.55;
+    color: #333;
+    margin: 0 0 6pt;
+  }
+  body.is-printing-full .case-print-secondary ul,
+  body.is-printing-full .case-print-secondary ol {
+    margin: 0 0 8pt;
+    padding-left: 16pt;
+    font-size: 9.5pt;
+    line-height: 1.55;
+    color: #333;
+  }
+  body.is-printing-full .case-print-secondary li {
+    margin-bottom: 2pt;
+  }
+  body.is-printing-full .case-print-secondary .callout {
+    background: #f8f8f8;
+    border-left: 3px solid #ccc;
+    padding: 6pt 10pt;
+    margin: 6pt 0 10pt;
+    font-size: 9pt;
+    color: #555;
+    display: block;
+  }
+  body.is-printing-full .case-print-secondary .callout-icon { display: none; }
+  body.is-printing-full .case-print-secondary .callout-body p { margin: 0; }
+  body.is-printing-full .case-print-secondary img,
+  body.is-printing-full .case-print-secondary .detail-image {
+    display: none;
+  }
+  body.is-printing-full .case-print-secondary a {
+    color: #333;
+    text-decoration: none;
+    border-bottom: 1px dotted #aaa;
+  }
+
+  /* 완전 버전 — 케이스 모달 디테일 전체 노출 */
+  body.is-printing-full .case-print-container {
+    display: block;
+    margin-top: 32pt;
+    border-top: 1px solid #ddd;
+    padding-top: 20pt;
+  }
+  body.is-printing-full .case-print {
+    page-break-inside: avoid;
+    margin: 0 0 24pt;
+    padding-bottom: 14pt;
+    border-bottom: 1px dashed #e0e0e0;
+  }
+  body.is-printing-full .case-print:last-child {
+    border-bottom: none;
+  }
+  body.is-printing-full .case-print-meta {
+    font-size: 8.5pt;
+    font-weight: 700;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin: 0 0 6pt;
+  }
+  body.is-printing-full .case-print-title {
+    font-size: 16pt;
+    font-weight: 800;
+    margin: 0 0 8pt;
+    line-height: 1.25;
+    color: #111;
+  }
+  body.is-printing-full .case-print-summary {
+    font-size: 10.5pt;
+    line-height: 1.55;
+    color: #444;
+    margin: 0 0 12pt;
+  }
+  body.is-printing-full .case-print-hero {
+    font-size: 14pt;
+    font-weight: 800;
+    margin: 0 0 12pt;
+    color: #222;
+  }
+  body.is-printing-full .case-print-hero span {
+    font-size: 10pt;
+    font-weight: 500;
+    color: #666;
+    margin-left: 8pt;
+  }
+  body.is-printing-full .case-print-metrics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6pt;
+    margin: 0 0 14pt;
+  }
+  body.is-printing-full .case-print-metric {
+    font-size: 9pt;
+    padding: 3pt 8pt;
+    background: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    color: #444;
+  }
+  body.is-printing-full .case-print-metric strong {
+    font-weight: 800;
+    color: #111;
+    margin-right: 2pt;
+  }
+  body.is-printing-full .case-print-block {
+    margin: 0 0 12pt;
+  }
+  body.is-printing-full .case-print-block h5 {
+    font-size: 8.5pt;
+    font-weight: 700;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 0 0 5pt;
+  }
+  body.is-printing-full .case-print-block ul {
+    margin: 0;
+    padding: 0 0 0 16pt;
+    font-size: 9.5pt;
+    line-height: 1.55;
+    color: #333;
+  }
+  body.is-printing-full .case-print-block li {
+    margin-bottom: 3pt;
+  }
+  body.is-printing-full .case-print-block li strong {
+    font-weight: 700;
+    color: #111;
+  }
+  body.is-printing-full .case-print-block li em {
+    font-style: normal;
+    color: #666;
+  }
+  body.is-printing-full .case-print-reflection {
+    font-size: 10pt;
+    font-style: italic;
+    color: #555;
+    border-left: 3px solid #ddd;
+    padding: 0 0 0 12pt;
+    margin: 14pt 0 0;
+    line-height: 1.55;
+  }
+
+  /* 완전 버전 — All Projects 리스트 (디테일 직전 페이지) */
+  body.is-printing-full .case-print-list-section {
+    page-break-after: always;
+    break-after: page;
+    margin-bottom: 0;
+  }
+  body.is-printing-full .case-print-list-title {
+    font-size: 10pt;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #888;
+    margin: 0 0 14pt;
+  }
+  body.is-printing-full .case-print-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  body.is-printing-full .case-list-item {
+    display: grid;
+    grid-template-columns: 130pt 1fr 90pt;
+    column-gap: 12pt;
+    align-items: baseline;
+    padding: 7pt 0;
+    border-bottom: 1px solid #eee;
+    font-size: 9.5pt;
+    page-break-inside: avoid;
+  }
+  body.is-printing-full .case-list-period {
+    color: #888;
+    font-size: 9pt;
+    white-space: nowrap;
+  }
+  body.is-printing-full .case-list-title {
+    color: #111;
+    font-weight: 600;
+  }
+  body.is-printing-full .case-list-company {
+    color: #888;
+    font-size: 9pt;
+    text-align: right;
+  }
 }
