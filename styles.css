@@ -363,7 +363,7 @@ body {
   .carousel-btn { display: none; }
 
   /* Modal — 모바일 콘텐츠 패딩 + 헤더 */
-  .case-modal-content { padding: 52px 20px 32px; }
+  .case-modal-content { padding: 52px 20px 80px; }
   .case-title { font-size: 22px; }
   .case-summary { font-size: 14px; }
   .case-section { margin: 22px 0; }
@@ -1710,7 +1710,7 @@ footer {
 .case-modal-content {
   flex: 1;
   overflow-y: auto;
-  padding: 56px 48px 48px;
+  padding: 56px 48px 96px;
   scrollbar-width: thin;
   scrollbar-color: var(--border) transparent;
 }
