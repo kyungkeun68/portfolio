@@ -344,8 +344,8 @@
     <p class="section-lede">전체 16개 프로젝트. 회사별로 필터링할 수 있습니다.</p>
 
     <div class="filter-chips" id="filter-chips">
-      <button class="filter-chip is-active" data-filter="all" type="button">All <span class="filter-count">18</span></button>
-      <button class="filter-chip" data-filter="crabs" type="button">크랩스 <span class="filter-count">6</span></button>
+      <button class="filter-chip is-active" data-filter="all" type="button">All <span class="filter-count">20</span></button>
+      <button class="filter-chip" data-filter="crabs" type="button">크랩스 <span class="filter-count">8</span></button>
       <button class="filter-chip" data-filter="ukpj" type="button">유쾌한프로젝트 <span class="filter-count">1</span></button>
       <button class="filter-chip" data-filter="gnwl" type="button">개념원리 <span class="filter-count">6</span></button>
       <button class="filter-chip" data-filter="letuin" type="button">렛유인에듀 <span class="filter-count">5</span></button>
@@ -414,6 +414,24 @@
           <span class="tag tag-crabs">크랩스</span>
         </div>
         <div class="work-period">2026.07.08 → 22 · 기여도 100%</div>
+      </a>
+
+      <a href="#case=broadcaster-poc" class="work-card" data-case="broadcaster-poc" data-company="crabs">
+        <div class="work-title">국내 대형 방송사 PoC — SOW·계약 설계</div>
+        <div class="work-desc">사내 표준 부재 상태에서 SOW + PoC 계약서 초안 단독 설계 + 정식 계약 전환 조건·우선협상권 선반영</div>
+        <div class="work-tags">
+          <span class="tag tag-crabs">크랩스</span>
+        </div>
+        <div class="work-period">2026.05 → 2026.06 · 기여도 100%</div>
+      </a>
+
+      <a href="#case=sermon-media-poc" class="work-card" data-case="sermon-media-poc" data-company="crabs">
+        <div class="work-title">강의·설교 미디어 PoC — 계약·원가 설계</div>
+        <div class="work-desc">모호한 니즈를 4단계 파이프라인으로 구조화 + 프로세스별 원가 모델링 + PoC 업무협약서 16조 단독 설계</div>
+        <div class="work-tags">
+          <span class="tag tag-crabs">크랩스</span>
+        </div>
+        <div class="work-period">2026.05 → 2026.06 · 기여도 100%</div>
       </a>
 
       <a href="works/naesin.html" class="work-card" data-case="naesin" data-company="gnwl">
@@ -980,6 +998,81 @@
             '리전 판별 실패가 조용히 넘어가지 않는 구조 — DB 로드 실패 시 부팅 차단'
           ],
           reflection: '"화면 번역만으로는 글로벌 대응이 되지 않아, 접속 국가 판별·표시 통화·콘텐츠 언어까지 프론트·백엔드·AI 3개 영역을 한 축으로 묶어 직접 구현했다."'
+        },
+        'broadcaster-poc': {
+          company: '크랩스', companyClass: 'tag-crabs',
+          period: '2026.05 → 06', contribution: '100%',
+          title: '국내 대형 방송사 PoC — SOW·계약 설계',
+          summary: '대형 방송사 대상 1개월 PoC 수주 후, 사내 표준이 없는 상태에서 범위 문서(SOW)와 PoC 계약서 초안을 PM이 단독으로 설계. 조항별 협상 포인트를 잡고 정식 계약 전환 조건까지 계약에 명문화.',
+          heroText: { big: '방송사 PoC 계약 설계', small: 'SOW + 계약서 초안 + 정식 전환 조건' },
+          metrics: [
+            { num: '1', unit: '개월', label: 'PoC 수주 → 범위·계약 단독 설계' },
+            { num: '2', unit: '문서', label: 'SOW + 계약서 초안 (사내 표준 부재)' },
+            { num: '4', unit: '조항', label: '운영·성공기준·정식전환·우선협상 재구성' }
+          ],
+          problem: [
+            'PoC 계약서 사내 표준이 없어 범위·비용·기간·산출물을 조항 단위로 처음부터 설계해야 함',
+            'PoC 범위와 정식 계약 범위가 뒤섞이면 협상 단계에서 과도한 기대·분쟁 소지가 생김',
+            '"우리가 영상을 만들어 주는가 vs 솔루션으로 클라이언트가 직접 생성하는가"의 책임 경계가 계약에 명확하지 않으면 납품 리스크로 이어짐'
+          ],
+          decisions: [
+            { title: 'PoC 범위 밖 항목을 "정식 계약 논의 항목"으로 재구성', detail: 'PoC에서 제외되는 항목을 단순 배제가 아니라 다음 단계 협상 테이블로 넘겨, 범위는 좁히되 확장 경로는 열어둠.' },
+            { title: '납품 구조를 계약에 명확화 — 대행이 아니라 솔루션 직접 생성', detail: '클라이언트가 솔루션으로 직접 영상을 생성하는 구조임을 조항으로 못박아 대량 제작 대행 기대를 사전 차단.' },
+            { title: '임박한 대형 이벤트를 납기 마일스톤으로 고정', detail: '검증 목표 시점을 명시해 PoC 성공 기준을 정량화하고 실무 일정의 기준점으로 삼음.' },
+            { title: '정식 계약 전환 조건·우선협상권을 계약에 선반영', detail: 'PoC 성공 시 어떤 조건으로 정식 계약으로 넘어가는지, 우선협상권을 어떻게 갖는지를 미리 명문화.' }
+          ],
+          features: [
+            { title: 'PoC 범위 문서(SOW) 작성', desc: '주차별 개발·운영 범위', detail: '전용 환경 세팅부터 기본 연동·운영 지원까지 주차 단위로 범위를 정의하고, 범위 밖 항목과 정식 계약 논의 항목을 분리해 기대치를 명확히 정렬.' },
+            { title: 'PoC 계약서 조항 초안', desc: '운영·소통 / 성공기준 / 정식전환 / 우선협상', detail: '사내 표준이 없는 상태에서 계약서 전 조항을 직접 초안. 각 조항의 협상 포인트를 판단하고 산출물별 수정 횟수·성공 기준 같은 실무 조건까지 반영.' },
+            { title: '보안·연동 명세', desc: '클라이언트 보안 기준 대응', detail: '클라이언트 보안 기준과 콘텐츠 관리 시스템 연동 요구사항을 명세로 정리해 PoC 셋업과 정식 연동 논의의 기준 문서로 확립.' },
+            { title: '실무 미팅 준비 · 액션아이템 정리', desc: '협상 아젠다 도출', detail: '실무 미팅에서 다룰 항목을 우선순위로 정리하고, 클라이언트 측 액션아이템과 대조해 우리가 먼저 가져가야 할 논의 지점을 도출.' }
+          ],
+          impact: [
+            '표준 없는 상태에서 PoC 수주 → 범위·계약·성공 기준을 단독 문서화',
+            'PoC와 정식 계약의 범위 경계를 명확히 해 협상 리스크를 사전 차단',
+            '정식 계약 전환 조건·우선협상권을 PoC 단계 계약에 선반영'
+          ],
+          reflection: '"PoC 계약서 표준이 없는 상태에서, 범위 밖 항목을 배제가 아니라 정식 계약 논의 항목으로 재구성해 범위는 좁히되 확장 경로를 계약에 남겼다."'
+        },
+        'sermon-media-poc': {
+          company: '크랩스', companyClass: 'tag-crabs',
+          period: '2026.05 → 06', contribution: '100%',
+          title: '강의·설교 미디어 PoC — 계약·원가 설계',
+          summary: 'AI 아바타·음성·인포그래픽 기반 강의 영상 자동 제작 PoC. 모호하게 오가던 클라이언트 요청을 실제 니즈로 판별하고, 늘어난 요구를 영상 생성 파이프라인으로 구조화한 뒤 프로세스별 원가를 모델링. 최종적으로 PoC 업무협약서 전 조항을 PM이 단독 설계.',
+          heroText: { big: '강의 미디어 PoC', small: '니즈 구조화 + 원가 모델 + 업무협약서 16조' },
+          metrics: [
+            { num: '16', unit: '조', label: 'PoC 업무협약서 전 조항 단독 설계' },
+            { num: '4', unit: '단계', label: '모호한 니즈를 영상 생성 파이프라인으로 구조화' },
+            { num: '2', unit: '축', label: '편당 원가 + 템플릿 구축비 프로세스별 모델링' }
+          ],
+          problem: [
+            '클라이언트 메시지("지난번 그 API 건")만으로는 실제 요청이 검토 문의인지 실제 납기 요청인지 판별 불가',
+            '당초 "대본 있는 강의에 아바타 입히기"로 봤던 범위가 협의 중 다단계 파이프라인으로 확대',
+            'AI·인프라 비용을 대충 얹으면 실제 편당 원가와 구축비를 회수할 기준이 안 나옴',
+            'PoC 산출물의 저작권·데이터 사용·정식 계약 전환 조건이 계약에 없으면 양산 단계에서 분쟁 소지'
+          ],
+          decisions: [
+            { title: '모호한 요청을 근거 없이 확대 해석하지 않고 실제 니즈로 좁혀 판별', detail: '메시지에 없는 맥락을 임의로 연결하지 않고, 확인이 필요한 지점을 분리해 미팅 아젠다로 가져감.' },
+            { title: '늘어난 요구를 4단계 영상 생성 파이프라인으로 구조화', detail: '흩어진 요구를 입력→생성→후처리→회신 흐름으로 정리해 원가 산정과 연동 명세의 공통 뼈대로 삼음.' },
+            { title: '원가를 API 환산이 아니라 실비용 기준으로 프로세스별 산정', detail: '단계별(대본·음성·렌더·자막 등) 비용을 실제 지출 기준으로 환산하고, 편당 원가와 템플릿 구축비를 별도 축으로 분리.' },
+            { title: '단계별 제작 비용 산출물을 정식 계약 양산 단가의 근거로 계약에 명시', detail: 'PoC 자체를 검증뿐 아니라 양산 단가 산정의 데이터 수집 단계로 설계 — 원가 산출물을 협약서 산출물 조항에 못박음.' },
+            { title: '산출물 저작권·기술 귀속·데이터 학습 방지를 조항으로 분리', detail: '제작물 저작권은 클라이언트, 기술·템플릿·노하우는 자사로 귀속. 제공 자료를 범용 AI 모델 학습에 쓰지 않는다는 보증까지 명문화.' }
+          ],
+          features: [
+            { title: '클라이언트 요청 판별', desc: '회의록·메시지 교차 검증', detail: '회의록과 메시지를 대조해 "검토 문의인지, 금주 납기 요청인지"를 구분하고 근거 없는 비약을 스스로 걸러낸 뒤 확인 질문으로 좁힘.' },
+            { title: '니즈 파이프라인 구조화', desc: '4단계 영상 생성 흐름', detail: '아바타·텍스트 변환·숏폼 생성 등 늘어난 요구를 하나의 파이프라인으로 정렬해, 이후 원가·연동·미팅 논의의 공통 기준을 확립.' },
+            { title: '프로세스별 편당 원가 모델', desc: '단계별 실비용 환산', detail: '대본·음성·렌더링·자막 등 생성 단계별 비용을 실지출 기준으로 환산해 편당 원가를 산출. API 환산 비용을 실제 비용처럼 정렬해 마진 판단 근거로 삼음.' },
+            { title: '템플릿 구축비 분리 산정', desc: '일회성 구축 vs 편당 변동', detail: '디자인·템플릿 같은 일회성 구축 비용을 편당 변동 원가와 분리해, 도입 형태별 견적이 왜곡되지 않도록 이원화.' },
+            { title: 'PoC 업무협약서 16조 설계', desc: '목적·마일스톤·범위·성공기준·정식전환·IP·비밀유지·데이터', detail: '사내 표준이 없는 상태에서 협약서 전 조항을 단독 초안. 주차별 마일스톤, PoC/정식 계약 범위 경계, 성공 기준, 정식 계약 전환 조건(합의 후 45일 원칙), 산출물 저작권 귀속, 3년 비밀유지, 제공 자료의 범용 모델 학습 금지 보증까지 실무 조건을 반영.' },
+            { title: 'API 연동 구조 협의', desc: 'URL 왕복 방식', detail: '영상 URL 전달 → 숏폼 생성 → 결과 URL 회신 구조로 연동을 합의해 양측 책임 경계를 단순화하고 실서비스 붙이기 리스크를 낮춤.' }
+          ],
+          impact: [
+            '모호한 클라이언트 요청을 실제 니즈로 판별해 미팅 표류를 사전 차단',
+            '늘어난 요구를 파이프라인으로 구조화해 원가·연동 논의의 공통 기준 확립',
+            '편당 원가와 구축비를 분리한 정량 모델로 견적·마진 판단 근거 확보',
+            'PoC 업무협약서 전 조항을 단독 설계 — PoC 검증을 정식 계약 양산 단가 산정 단계로 연결'
+          ],
+          reflection: '"모호한 요청을 실제 니즈로 좁혀 파이프라인으로 구조화하고 프로세스별 실비용으로 원가를 산정한 뒤, PoC 업무협약서에 단계별 원가 산출물을 정식 계약 양산 단가의 근거로 못박아 검증 단계와 양산 협상을 하나로 이었다."'
         },
         'prompt-eng': {
           company: '크랩스', companyClass: 'tag-crabs',
