@@ -344,8 +344,8 @@
     <p class="section-lede">전체 16개 프로젝트. 회사별로 필터링할 수 있습니다.</p>
 
     <div class="filter-chips" id="filter-chips">
-      <button class="filter-chip is-active" data-filter="all" type="button">All <span class="filter-count">20</span></button>
-      <button class="filter-chip" data-filter="crabs" type="button">크랩스 <span class="filter-count">8</span></button>
+      <button class="filter-chip is-active" data-filter="all" type="button">All <span class="filter-count">21</span></button>
+      <button class="filter-chip" data-filter="crabs" type="button">크랩스 <span class="filter-count">9</span></button>
       <button class="filter-chip" data-filter="ukpj" type="button">유쾌한프로젝트 <span class="filter-count">1</span></button>
       <button class="filter-chip" data-filter="gnwl" type="button">개념원리 <span class="filter-count">6</span></button>
       <button class="filter-chip" data-filter="letuin" type="button">렛유인에듀 <span class="filter-count">5</span></button>
@@ -414,6 +414,15 @@
           <span class="tag tag-crabs">크랩스</span>
         </div>
         <div class="work-period">2026.07.08 → 22 · 기여도 100%</div>
+      </a>
+
+      <a href="#case=us-gtm" class="work-card" data-case="us-gtm" data-company="crabs">
+        <div class="work-title">정부 지원 미국 시장 진출 마케팅 리드</div>
+        <div class="work-desc">사업계획서를 4카테고리 실행 체크리스트로 분해 + 마일스톤 5단계 WBS + 영어 UI E2E QA + 미국 런칭 준비안 (단독 PM)</div>
+        <div class="work-tags">
+          <span class="tag tag-crabs">크랩스</span>
+        </div>
+        <div class="work-period">2026.06 → 2026.09 · 기여도 100%</div>
       </a>
 
       <a href="#case=broadcaster-poc" class="work-card" data-case="broadcaster-poc" data-company="crabs">
@@ -998,6 +1007,44 @@
             '리전 판별 실패가 조용히 넘어가지 않는 구조 — DB 로드 실패 시 부팅 차단'
           ],
           reflection: '"화면 번역만으로는 글로벌 대응이 되지 않아, 접속 국가 판별·표시 통화·콘텐츠 언어까지 프론트·백엔드·AI 3개 영역을 한 축으로 묶어 직접 구현했다."'
+        },
+        'us-gtm': {
+          company: '크랩스', companyClass: 'tag-crabs',
+          period: '2026.06 → 09 (진행 중)', contribution: '100%',
+          title: '정부 지원 미국 시장 진출 마케팅 리드',
+          summary: '정부 해외마케팅 지원사업(TIPS)의 미국 진출 마케팅을 PM이 단독으로 리드. 흩어진 사업계획서를 실행 체크리스트로 분해하고, 날짜가 박힌 WBS로 일정화한 뒤 영어 UI E2E QA·해외 결제 방식 비교·런칭 준비안까지 처리.',
+          heroText: { big: '미국 진출 마케팅 리드', small: '사업계획서 → 실행 체크리스트 → WBS → 런칭 준비안' },
+          metrics: [
+            { num: '4', unit: '카테고리', label: '사업계획서를 제품·영문카피·마케팅·법/결제 실행 항목으로 분해' },
+            { num: '5', unit: '마일스톤', label: '내부 데드라인·승인 게이트·의존성까지 WBS 설계' },
+            { num: '1인', unit: 'PM', label: '개발·마케팅 담당 부재 상태에서 진출 실행 단독' }
+          ],
+          problem: [
+            '정부 지원 사업계획서에 "할 일"이 흩어져 있어 곧바로 실행 단위로 잡히지 않음',
+            '개발·마케팅 담당이 PM 본인뿐 — 범위를 잘못 잡으면 실행 자체가 불가',
+            '마케팅 도메인 사전 지식 없이 미국 타겟·채널·소재·KPI를 처음부터 설계해야 함'
+          ],
+          decisions: [
+            { title: 'C레벨 의사결정이 필요 없는 실행분만 본인 태스크로 분리', detail: '결제·법·인프라·특허 같은 타부서·리스크 항목은 체크리스트의 별도 섹션으로 빼 범위 폭발을 방지.' },
+            { title: '착수일·내부 데드라인·승인 게이트를 날짜로 못박은 WBS', detail: '마일스톤만 있으면 기한 전날 몰아치므로, 공식 기한보다 앞당긴 내부 데드라인과 "언제 보내 언제 받는다"까지 명시.' },
+            { title: '고도화를 기다리지 않고 현재 빌드로 E2E 베이스라인 먼저', detail: '업그레이드를 기다리다 마일스톤이 밀리지 않도록, 현재 빌드로 기준선을 잡고 개선분은 결과에서 도출하는 백로그로 내림. 전후 비교가 오히려 증빙에 유리.' },
+            { title: '리서치는 검증된 레퍼런스만 반영', detail: '수치마다 출처 링크를 붙이고 100% 검증한 내용만 준비안에 넣어, 근거 없는 마케팅 주장 배제.' }
+          ],
+          features: [
+            { title: '사업계획서 액션 체크리스트', desc: '4개 카테고리 분해', detail: '미국 런칭에 필요한 항목을 제품·영문 카피·마케팅·법/결제/인프라로 분리. 본인 실행분과 타부서·리스크 항목을 구분해 이후 태스크의 재료로 확립.' },
+            { title: 'WBS + 일정 계획', desc: '마일스톤 5단계 + 내부 데드라인', detail: '체크리스트 → E2E → 영문 표현 → 런칭 준비안 → 지속 실행으로 마일스톤을 분해하고, 각 작업에 착수일·자체 목표 완료일·승인 게이트·선행 의존을 표시.' },
+            { title: '영어 UI E2E QA', desc: '전체 플로우 브라우저 실측', detail: '영어 설정으로 업로드→분석→숏폼 생성까지 전체 플로우를 브라우저로 직접 클릭하며 점검. UI·자막·내레이션·결과물 톤 문제를 진단 리포트로 리스트업해 코드 레벨 수정으로 연결.' },
+            { title: '해외 결제 방식 비교', desc: 'Merchant of Record 방식 검토', detail: '해외 결제를 직접 연동 대신 판매 대행(MoR) 방식으로 검토해 세금·규제 부담을 낮추는 안을 비교. USD 표시 가격 정책(원화 기준 환산)도 함께 정리.' },
+            { title: '미국 시장·타겟 세그먼트 리서치', desc: '출처 검증 기반', detail: '제품이 가장 잘 도울 수 있는 타겟 세그먼트와 진입 채널을 리서치. 각 수치에 레퍼런스 링크를 달고 검증한 근거만 채택.' },
+            { title: '런칭 준비안', desc: '채널·소재·아웃리치·KPI', detail: '첫 진입 채널, 첫 광고 카피·소재, 크리에이터·인플루언서 후보 수집 방식, 첫 실험 KPI까지 정리해 7월 말 런칭을 위한 실행안으로 완성.' }
+          ],
+          impact: [
+            '흩어진 정부 지원 사업계획서를 실행 가능한 체크리스트·WBS로 전환',
+            '현재 빌드 기준 E2E 베이스라인 확보 → 고도화 전후 비교 근거 마련',
+            '검증된 리서치 기반으로 미국 런칭 준비안(채널·소재·KPI) 완성',
+            '개발·마케팅 인력이 없는 상태에서 진출 마케팅을 단독으로 리드'
+          ],
+          reflection: '"정부 지원사업 계획서의 흩어진 할 일을 실행 체크리스트와 날짜가 박힌 WBS로 전환하고, 인력이 없는 상태에서 현재 빌드 E2E 베이스라인부터 잡아 마일스톤이 밀리지 않게 미국 진출 마케팅을 단독으로 이끌었다."'
         },
         'broadcaster-poc': {
           company: '크랩스', companyClass: 'tag-crabs',
