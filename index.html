@@ -341,11 +341,11 @@
     </div>
 
     <h2 id="all-projects" class="section-title">All Projects</h2>
-    <p class="section-lede">전체 16개 프로젝트. 회사별로 필터링할 수 있습니다.</p>
+    <p class="section-lede">전체 23개 프로젝트. 회사별로 필터링할 수 있습니다.</p>
 
     <div class="filter-chips" id="filter-chips">
-      <button class="filter-chip is-active" data-filter="all" type="button">All <span class="filter-count">22</span></button>
-      <button class="filter-chip" data-filter="crabs" type="button">크랩스 <span class="filter-count">10</span></button>
+      <button class="filter-chip is-active" data-filter="all" type="button">All <span class="filter-count">23</span></button>
+      <button class="filter-chip" data-filter="crabs" type="button">크랩스 <span class="filter-count">11</span></button>
       <button class="filter-chip" data-filter="ukpj" type="button">유쾌한프로젝트 <span class="filter-count">1</span></button>
       <button class="filter-chip" data-filter="gnwl" type="button">개념원리 <span class="filter-count">6</span></button>
       <button class="filter-chip" data-filter="letuin" type="button">렛유인에듀 <span class="filter-count">5</span></button>
@@ -405,6 +405,15 @@
           <span class="tag tag-crabs">크랩스</span>
         </div>
         <div class="work-period">2026.05.18 → 26 · 기여도 80%</div>
+      </a>
+
+      <a href="#case=api-cost-bot" class="work-card" data-case="api-cost-bot" data-company="crabs">
+        <div class="work-title">외부 API 원가 계산기 + 사내 메신저 봇</div>
+        <div class="work-desc">홈·플레이그라운드 55개 메뉴의 실제 호출 경로와 가격 근거를 최소 정가 지식으로 구조화 · 봇 태그 한 번으로 메뉴·기능별 조회</div>
+        <div class="work-tags">
+          <span class="tag tag-crabs">크랩스</span>
+        </div>
+        <div class="work-period">2026.08 · 기여도 100%</div>
       </a>
 
       <a href="#case=global-locale" class="work-card" data-case="global-locale" data-company="crabs">
@@ -977,6 +986,46 @@
             'AWS 변동비 회수가 가격 정책에 반영되어 흑자 가능 시점이 명확'
           ],
           reflection: '"가격 정책의 마지노선과 마진을 SQL로 산출한 원가와 AWS 분담 비율로 산정했다."'
+        },
+        'api-cost-bot': {
+          company: '크랩스', companyClass: 'tag-crabs',
+          period: '2026.08', contribution: '100%',
+          title: '외부 API 원가 계산기 + 사내 메신저 봇',
+          summary: '서비스 전체 메뉴의 실제 외부 API 호출 경로와 공식 가격 근거를 코드에서 추적해 최소 정가 관리대장으로 구조화. 코딩 에이전트와 대화형으로 산정 규칙을 계속 보정하고, 그 지식을 사내 메신저 봇에 연결해 메뉴·기능별 최소 정가를 바로 조회할 수 있게 구현.',
+          heroText: { big: '55개 메뉴 원가 지식화', small: '코드 추적 → 최소 정가 → 메신저 즉시 조회' },
+          metrics: [
+            { num: '55', unit: '진입점', label: '홈 9 + 플레이그라운드 46 전수 매핑' },
+            { num: '0', unit: '누락', label: '플레이그라운드 메뉴 레지스트리 대조' },
+            { num: '26', unit: '근거', label: '20개 공급자의 공식 가격·쿼터 페이지 정리' }
+          ],
+          problem: [
+            '메뉴·기능별 원가 질문이 반복될 때마다 코드와 가격표를 다시 확인해야 해 답변 시간이 길고 기준도 흔들림',
+            '한 메뉴 안에서도 필수 선행 단계·선택 분기·동적 수량·재시도가 섞여 단순 API 단가 합산만으로는 최소 정가가 왜곡됨',
+            '표준 단위 원가, 사용자가 받는 결과 수, 정상 완료에 필요한 외부 API 호출 수가 서로 다른데 기존 자료에서는 같은 수량처럼 취급됨',
+            '스프레드시트만으로는 영업·운영 담당자가 필요한 순간에 메뉴명을 기준으로 가격을 찾기 어려움'
+          ],
+          decisions: [
+            { title: '화면의 메뉴 레지스트리에서 시작해 실제 실행 경로를 코드로 역추적', detail: '등록만 된 기능과 현재 메뉴에서 실제 호출 가능한 기능을 분리하고, 메뉴 → 워크플로 → 외부 클라이언트 순으로 근거를 연결.' },
+            { title: '최소 정가는 정상 결과 1회에 반드시 필요한 호출만 반영', detail: '자동 재시도·실패 복구·사용자 재생성은 제외하고, 정상 완료에 필수인 다중 호출은 횟수 그대로 유지.' },
+            { title: '표준 단위·사용자 결과 수·필수 API 호출 수를 별도 관리', detail: '이미지 1장 같은 단가 기준과 메뉴 한 번의 결과 수, 내부 호출 횟수를 분리해 2회·4회 호출의 근거를 검증 가능하게 만듦.' },
+            { title: '필수 선행 단계와 선택 분기를 경로별 조건부 합산', detail: '연속 플로우의 공통 선행 비용은 포함하되 한 번만 더하고, 기존 자산을 쓸 수 있는 선택 경로는 생성 비용을 무조건 합산하지 않음.' },
+            { title: '코딩 에이전트의 대화형 보정 결과를 봇의 답변 지식으로 연결', detail: '코드·관리대장을 검증하며 발견한 예외와 수정 규칙을 계속 반영하고, 사내 메신저에서 봇을 태그해 자연어로 조회하는 방식으로 운영.' }
+          ],
+          features: [
+            { title: '메뉴별 외부 API 인벤토리', desc: '홈 9 + 플레이그라운드 46', detail: '각 진입점의 실제 호출 기능·조건부 경로·과금 단위를 코드 근거와 함께 매핑하고, 플레이그라운드 레지스트리 기준 누락 0건을 확인.' },
+            { title: '공식 가격 근거 원장', desc: '20개 공급자 · 26개 가격·쿼터 근거', detail: '공개 단가, 요금제·계약 단가, 무료 구간을 구분하고 가격 확인 근거와 산정 단위를 함께 기록해 숫자만 떠도는 문제를 방지.' },
+            { title: '메뉴·기능별 최소 정가 관리대장', desc: '원가 + 가산 기준 + 경로별 합산', detail: '텍스트·음성·이미지·영상·렌더·저장 등 기능 원가를 메뉴 흐름에 맞춰 결합하고, 입력이 필요한 동적 메뉴는 임의값 대신 계산 조건을 명시.' },
+            { title: '코드 기반 교차 검증', desc: '워크플로와 수식의 양방향 대조', detail: '결과 수와 호출 수, 모델 선택지와 실제 연결, 필수 단계와 독립 실행 여부를 코드와 관리대장 양쪽에서 검증해 잘못된 고정값·분리·합산을 찾아냄.' },
+            { title: '대화형 지식 보정', desc: '코딩 에이전트와 규칙을 지속 학습', detail: '오류 사례를 단발 수정으로 끝내지 않고 최소 성공 호출, 선택 분기, 재시도 제외 같은 판정 규칙으로 일반화해 이후 답변에도 적용.' },
+            { title: '사내 메신저 원가 봇', desc: '태그 + 자연어 질문', detail: '봇을 태그하고 메뉴명 또는 기능명을 물으면 연결된 원가 지식에서 최소 정가와 산정 조건을 찾아 답변. 별도 파일을 열지 않아도 영업·운영 대화 안에서 즉시 확인.' }
+          ],
+          impact: [
+            '홈·플레이그라운드 55개 메뉴 진입점과 실제 외부 비용 경로를 하나의 기준으로 통합',
+            '반복되던 원가 문의를 사내 메신저의 메뉴·기능별 셀프 조회 방식으로 전환',
+            '필수 다중 호출과 재시도, 공통 선행 단계와 선택 분기를 분리해 최소 정가의 과대·과소 산정 위험을 줄임',
+            '코드 변경과 가격 변동을 코딩 에이전트의 대화형 검증·보정으로 이어갈 수 있는 운영 구조 확립'
+          ],
+          reflection: '"55개 메뉴의 실제 호출 경로와 26개 가격 근거를 최소 성공 호출 규칙으로 구조화하고 사내 메신저 봇에 연결해, 반복 원가 문의를 메뉴·기능별 즉시 조회로 전환했다."'
         },
         'global-locale': {
           company: '크랩스', companyClass: 'tag-crabs',
