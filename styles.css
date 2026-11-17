@@ -1489,6 +1489,34 @@ code {
   object-fit: contain;
 }
 
+/* 두 로고를 대각선으로 겹쳐 배치 (Claude Code 왼쪽 위, Codex 오른쪽 아래) */
+.ability-logo-pair {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+.ability-logo-pair .ability-logo {
+  position: absolute;
+  width: 13px;
+  height: 13px;
+}
+.ability-logo-pair .ability-logo:first-child { top: 0; left: 0; }
+.ability-logo-pair .ability-logo:last-child {
+  right: 0;
+  bottom: 0;
+  background: var(--bg-soft);
+  border-radius: 50%;
+  box-shadow: 0 0 0 1.5px var(--bg-soft);
+}
+/* 다크 모드: 검은 OpenAI 로고를 흰색으로 반전. filter가 배경까지 반전하므로
+   배경은 --bg-soft(#232220)의 반전색(#dcdddf)으로 둬서 결과가 사이드바 색과 같게 한다 */
+[data-theme="dark"] .ability-logo-pair .ability-logo:last-child {
+  filter: invert(1);
+  background: #dcdddf;
+  box-shadow: 0 0 0 1.5px #dcdddf;
+}
+
 .ability-bar {
   position: relative;
   height: 6px;
