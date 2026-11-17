@@ -849,13 +849,14 @@
             { title: '운영 중 나온 개선 요청은 바이브코딩으로 직접 구현', detail: '앵커 포인트 수정, 컨셉 추천 태그 추가 같은 요청을 개발팀 일정을 기다리지 않고 직접 구현해서, 개발팀은 로드맵 작업에 집중할 수 있게 함' }
           ],
           features: [
+            { group: '운영 · 계약' },
             { title: '정식 계약 서류 작성·협상', desc: '계약 조항 검토 및 협상', detail: '계약서 작성부터 조항 협상, 체결까지 담당.' },
             { title: '매뉴얼 v1.0 → v2.4 개정, 운영 사용설명서 5종 작성', desc: '실사용 질문을 반영해 계속 개정', detail: 'PoC 매뉴얼을 고객사 실무자의 질문과 실수에 맞춰 v2.4까지 개정. AI 영상 생성, 내부 도구, 일반 테넌트 운영, 영상 소재로 콘텐츠를 만드는 STC(Source to Content), 프롬프트 영상 생성까지 사용설명서 5종을 써서 고객사에 새 담당자가 와도 스스로 익힐 수 있게 함.' },
             { title: '슬랙 채널과 정기 미팅 운영', desc: '사용 중 생긴 문제·요청을 매주 회의록으로 기록', detail: '고객사 실무자들이 쓰면서 겪은 문제와 요청을 슬랙으로 바로 받고 매주 회의록으로 남겨, 전사 확산 때 다른 팀이 참고할 수 있게 함.' },
             { title: '소재 만들기 (썸네일·배너 생성기)', desc: '영상 제작 흐름 보조', detail: '고객사가 실제로 영상을 만드는 순서에 맞춰 썸네일과 배너를 바로 뽑을 수 있게 만든 도구.' },
             { title: '윈도우 앱 (보안망 대응)', desc: '보안망 PC에서 로그인하고, 입력과 내보내기 단계에서 대용량 MXF 파일을 처리', detail: '고객사 사옥에 직접 가서 PC 보안 환경을 확인한 뒤 개발팀에 윈도우 앱을 의뢰. 전사 확장의 마지막 걸림돌이던 보안망 문제를 해결.' },
-            { title: '고객사 요청 기능 개선 10+건', desc: '프론트, 백엔드, AI 영역을 가리지 않고 직접 구현', detail: '고객사가 쓰면서 발견한 불편과 요청을 기존 인프라 위에서 직접 구현. 개발팀 일정은 그대로 두면서 고객사 불편은 바로 해결.' },
             { title: '추가 계약 — 인프라 도입 3안 비교', desc: '3안을 비용·속도·확장성으로 비교하고 1개월 검증 테스트 설계', detail: '고객사 사옥 네트워크 제약 때문에 영상 처리가 느려지는 문제가 생김. 클라우드, 자체 서버, 워크스테이션 3안을 비용·속도·확장성으로 비교하고, 선정안은 본 도입 전에 1개월간 검증하는 테스트를 따로 설계.' },
+            { group: '고객사 요청 기능 개선 — 직접 구현 10+건 중 대표 6건', note: '그 외: 앵커 포인트 수정, 컨셉 추천 태그 추가, GTS 영상 생성 시 참조 이미지 다중 선택, 여러 단계로 나뉘어 있던 생성 과정을 에이전트 모드로 한 번에 자동화, 생성 인물의 성별·연령대(여아·남아·성인 남녀) 선택 등' },
             { title: '관리자 사용량 리포트 신규 카테고리', desc: '신규 카테고리와 가중 집계 로직을 백엔드에 직접 구현', detail: '고객사 관리자 사용량 페이지에 신규 기능 카테고리와 가중 집계를 추가. 화면 비율에 따라 해상도 가중치가 잘못 매겨지던 판정을 픽셀 수 기준으로 고치고, 다른 사람 프로젝트에서 추출한 사용량이 엉뚱한 소속으로 잡히던 버그도 함께 수정.' },
             { title: '상품 목록 · 분석 옵션 화면 정비', desc: '상품 목록 구성과 분석 옵션 안내를 프론트에서 직접 구현', detail: '고객사 커머스 사이트의 이벤트 페이지에서 대표 상품 목록을 불러올 때, 상품이 1개 이하로 등록되어 있을 때 발생하던 버그 수정. 단일 상품인 경우 해당 상품 하나만 노출되고, 썸네일이 없으면 상품 코드로 대신 표시. 분석 옵션 화면에는 필터별 안내 문구를 넣고 라이트 모드에서도 잘 보이게 보강.' },
             { title: '보유 에셋 검색 진입 화면과 검색 API', desc: '진입 화면과 검색 API를 프론트·백엔드 모두 직접 구현', detail: '외부 링크를 넣는 대신 고객사 작업 공간(스페이스)에 이미 있는 영상을 검색해 하이라이트를 만들 수 있게 진입 화면을 바꿈. 공유받은 폴더까지 권한에 맞게 검색되고, 한글 자모가 분리된 파일명도 검색됨. 프로젝트가 이미 있으면 열고, 없으면 새로 만들도록 분기.' },
@@ -1645,7 +1646,12 @@
           </div>
         `).join('');
 
-        const featuresHtml = c.features.map(f => `
+        const featuresHtml = c.features.map(f => f.group ? `
+          <div class="case-feature-group">
+            <div class="case-feature-group-title">${escapeHtml(f.group)}</div>
+            ${f.note ? `<div class="case-feature-group-note">${escapeHtml(f.note)}</div>` : ''}
+          </div>
+        ` : `
           <div class="case-feature">
             <div class="case-feature-title">${escapeHtml(f.title)}</div>
             <div class="case-feature-desc">${escapeHtml(f.desc)}</div>
@@ -1946,6 +1952,7 @@
         const esc = s => String(s).replace(/[&<>]/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[ch]));
         const renderItems = (items) => items.map(i => {
           if (typeof i === 'string') return `<li>${esc(i)}</li>`;
+          if (i.group) return `<li class="case-print-group"><strong>${esc(i.group)}</strong>${i.note ? ` — ${esc(i.note)}` : ''}</li>`;
           const desc = i.desc ? ` <em>${esc(i.desc)}</em>` : '';
           const detail = i.detail ? ` — ${esc(i.detail)}` : '';
           return `<li><strong>${esc(i.title)}</strong>${desc}${detail}</li>`;
